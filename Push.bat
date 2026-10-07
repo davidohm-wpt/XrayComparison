@@ -14,58 +14,84 @@ if not exist "%GIT%" (
     exit /b 1
 )
 
-:: --- Step 1: Status check ---
-echo [1/5] Checking status...
+:: ============================================================
+:: Step 1: Show status
+:: ============================================================
+echo [1/6] Checking status...
+echo ----------------------------------------
 "%GIT%" status --short
+echo ----------------------------------------
 echo.
 
-:: --- Step 2: Add all changes ---
-echo [2/5] Staging changes...
+:: ============================================================
+:: Step 2: Stage changes
+:: ============================================================
+echo [2/6] Staging changes...
 "%GIT%" add -A
 echo.
 
-:: --- Step 3: Commit ---
-echo [3/5] Committing...
+:: ============================================================
+:: Step 3: Commit
+:: ============================================================
+echo [3/6] Committing...
 set /p COMMIT_MSG="Commit message: "
 if "%COMMIT_MSG%"=="" set COMMIT_MSG=Auto-update
 "%GIT%" commit -m "%COMMIT_MSG%"
 if %errorlevel% neq 0 (
     echo.
     echo [Info] Nothing to commit or commit failed.
+    echo        Nothing to push.
     echo.
     pause
     exit /b 0
 )
 echo.
 
-:: --- Step 4: Pull (rebase) with safer approach ---
-echo [4/5] Fetching latest from GitHub...
+:: ============================================================
+:: Step 4: Fetch from GitHub (safe)
+:: ============================================================
+echo [4/6] Fetching latest from GitHub...
 "%GIT%" fetch origin main
 if %errorlevel% neq 0 (
     echo [Warning] Cannot reach GitHub.
-    echo Continuing with push anyway...
-) else (
-    :: Try rebase, but if it fails, abort safely
-    "%GIT%" rebase origin/main
-    if %errorlevel% neq 0 (
-        echo.
-        echo [Warning] Rebase conflict detected. Aborting rebase...
-        "%GIT%" rebase --abort
-        echo [Info] Local files preserved. Manual merge needed.
-        echo.
-        pause
-        exit /b 1
-    )
+    echo           Continuing with push anyway...
+    echo.
+    goto :push
 )
 echo.
 
-:: --- Step 5: Push ---
-echo [5/5] Pushing to GitHub...
+:: ============================================================
+:: Step 5: Rebase with safety
+:: ============================================================
+echo [5/6] Rebasing on top of origin/main...
+"%GIT%" rebase origin/main
+if %errorlevel% neq 0 (
+    echo.
+    echo [Warning] Rebase conflict detected!
+    echo           Aborting rebase - local files preserved.
+    echo.
+    "%GIT%" rebase --abort
+    echo [Info] Your local files are safe.
+    echo        Please resolve conflicts manually or contact support.
+    echo.
+    pause
+    exit /b 1
+)
+echo.
+
+:: ============================================================
+:: Step 6: Push
+:: ============================================================
+:push
+echo [6/6] Pushing to GitHub...
 "%GIT%" push origin main
 if %errorlevel% neq 0 (
     echo.
     echo [Error] Push failed. Check message above.
-    echo [Tip] Try running: git pull --rebase origin main
+    echo.
+    echo [Tip] Try running this command manually:
+    echo       PortableGit\bin\git.exe push origin main --force
+    echo.
     pause
     exit /b 1
 )

@@ -9,6 +9,7 @@ cd /d "%~dp0"
 set GITHUB_REPO=https://github.com/davidohm-wpt/XrayComparison.git
 set GITHUB_BRANCH=main
 set WEB_DIR=%~dp0web
+set TEMP_CLONE=%~dp0_temp_clone
 set PORT=8080
 
 echo ===================================================
@@ -37,9 +38,6 @@ if exist "%~dp0PortableGit\bin\git.exe" (
     )
 )
 
-:: ============================================================
-:: Download/Update web files from GitHub
-:: ============================================================
 if "!GIT_EXE!"=="" (
     echo.
     echo [Error] PortableGit not found!
@@ -49,33 +47,43 @@ if "!GIT_EXE!"=="" (
     exit /b 1
 )
 
+:: ============================================================
+:: Download/Update web files from GitHub
+:: ============================================================
 echo.
 echo ===================================================
 echo   Checking for updates from GitHub...
 echo ===================================================
 echo.
 
-if exist "!WEB_DIR!\.git" (
-    :: มี .git → pull
-    pushd "!WEB_DIR!"
-    "!GIT_EXE!" fetch origin !GITHUB_BRANCH! >nul 2>&1
-    if !errorlevel! neq 0 (
-        echo [Warning] Cannot reach GitHub - using local files.
-    ) else (
-        "!GIT_EXE!" reset --hard origin/!GITHUB_BRANCH! >nul 2>&1
+if exist "!WEB_DIR!\index.html" (
+    :: มีไฟล์ web/ อยู่แล้ว → ลองอัปเดต
+    if exist "!WEB_DIR!\.git" (
+        pushd "!WEB_DIR!"
+        "!GIT_EXE!" fetch origin !GITHUB_BRANCH! >nul 2>&1
         if !errorlevel! neq 0 (
-            echo [Warning] git reset failed - using local files.
+            echo [Warning] Cannot reach GitHub - using local files.
         ) else (
-            echo Update completed.
+            "!GIT_EXE!" reset --hard origin/!GITHUB_BRANCH! >nul 2>&1
+            if !errorlevel! neq 0 (
+                echo [Warning] git reset failed - using local files.
+            ) else (
+                echo Update completed.
+            )
         )
+        popd
+    ) else (
+        echo [Info] Using existing local files.
     )
-    popd
 ) else (
-    :: ยังไม่มี → clone ครั้งแรก
+    :: ยังไม่มี → clone ไปที่ temp แล้วดึงเฉพาะ web/
     echo First time setup - downloading from GitHub...
     echo This may take 5-10 seconds.
+
+    if exist "!TEMP_CLONE!" rmdir /s /q "!TEMP_CLONE!"
     if exist "!WEB_DIR!" rmdir /s /q "!WEB_DIR!"
-    "!GIT_EXE!" clone --depth 1 --branch !GITHUB_BRANCH! !GITHUB_REPO! "!WEB_DIR!" >nul 2>&1
+
+    "!GIT_EXE!" clone --depth 1 --branch !GITHUB_BRANCH! !GITHUB_REPO! "!TEMP_CLONE!" >nul 2>&1
     if !errorlevel! neq 0 (
         echo.
         echo [Error] Cannot clone from GitHub!
@@ -84,6 +92,30 @@ if exist "!WEB_DIR!\.git" (
         pause
         exit /b 1
     )
+
+    :: ย้าย web/ จาก temp ไป root
+    if exist "!TEMP_CLONE!\web" (
+        move "!TEMP_CLONE!\web" "!WEB_DIR!" >nul 2>&1
+        if !errorlevel! neq 0 (
+            echo.
+            echo [Error] Cannot move web folder.
+            echo.
+            rmdir /s /q "!TEMP_CLONE!"
+            pause
+            exit /b 1
+        )
+    ) else (
+        echo.
+        echo [Error] web folder not found in GitHub repo.
+        echo.
+        rmdir /s /q "!TEMP_CLONE!"
+        pause
+        exit /b 1
+    )
+
+    :: ลบ temp
+    rmdir /s /q "!TEMP_CLONE!"
+
     echo Initial download completed.
 )
 

@@ -1,0 +1,230 @@
+# ============================================================
+# .gitignore — WIPOTEC X-Ray Comparison
+# ============================================================
+# ไฟล์และโฟลเดอร์ในรายการนี้จะไม่ถูก push ขึ้น GitHub
+# ============================================================
+
+
+# ------------------------------------------------------------
+# 🔐 SECRETS — ห้ามขึ้น GitHub เด็ดขาด!
+# ------------------------------------------------------------
+# Personal Access Token / API keys / Passwords
+Github_token.txt
+github_token.txt
+*token*.txt
+*.token
+.env
+.env.*
+secrets.txt
+secrets.*
+*.key
+*.pem
+credentials.*
+password*.txt
+
+
+# ------------------------------------------------------------
+# 📦 PORTABLE RUNTIMES — ไฟล์ใหญ่ เกิน limit GitHub
+# ------------------------------------------------------------
+# Python Portable (~15-30 MB)
+PythonPortable/
+python-portable/
+python/
+py/
+
+# PortableGit (~100-200 MB)
+PortableGit/
+portable-git/
+
+# GTK3 Runtime (ใช้ใน PV project)
+GTK3-Runtime/
+gtk3-runtime/
+
+# Node portable (ถ้ามี)
+node-portable/
+node_modules/
+
+
+# ------------------------------------------------------------
+# 🐍 PYTHON CACHE
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+
+# ------------------------------------------------------------
+# 🖥️ WINDOWS SYSTEM FILES
+# ------------------------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+
+# ------------------------------------------------------------
+# 🍎 MACOS SYSTEM FILES
+# ------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+.fseventsd
+.fseventsd/
+.DocumentRevisions-V100
+.TemporaryItems
+
+
+# ------------------------------------------------------------
+# 🐧 LINUX SYSTEM FILES
+# ------------------------------------------------------------
+*~
+.directory
+.Trash-*
+
+
+# ------------------------------------------------------------
+# 💻 EDITOR / IDE
+# ------------------------------------------------------------
+.vscode/
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.code-workspace
+
+
+# ------------------------------------------------------------
+# 📝 LOG FILES
+# ------------------------------------------------------------
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pv_server.log
+
+
+# ------------------------------------------------------------
+# 📁 TEMPORARY FILES
+# ------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+~$*
+*.crdownload
+*.part
+*.partial
+
+
+# ------------------------------------------------------------
+# 🗂️ BUILD / DIST FOLDERS
+# ------------------------------------------------------------
+build/
+dist/
+out/
+bin/
+obj/
+
+
+# ------------------------------------------------------------
+# 📊 OFFICE TEMP FILES
+# ------------------------------------------------------------
+~$*.doc
+~$*.docx
+~$*.xls
+~$*.xlsx
+~$*.ppt
+~$*.pptx
+*.tmp.docx
+*.tmp.xlsx
+
+
+# ------------------------------------------------------------
+# 🎨 IMAGE EDITOR TEMP FILES
+# ------------------------------------------------------------
+*.psd
+*.ai
+*.sketch
+*.xcf
+*.afdesign
+*.afphoto
+
+
+# ------------------------------------------------------------
+# 🗜️ ARCHIVE FILES (ไม่ควร commit ZIP/7z)
+# ------------------------------------------------------------
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+
+# ------------------------------------------------------------
+# 🌐 BROWSER TEST FILES
+# ------------------------------------------------------------
+chromedriver
+geckodriver
+selenium-server*.jar
+
+
+# ------------------------------------------------------------
+# 🎯 PROJECT-SPECIFIC
+# ------------------------------------------------------------
+# ถ้ามีไฟล์ backup ของโปรเจกต์
+index_backup.html
+data_backup.js
+app_backup.js
+style_backup.css
+*-backup.*
+*.copy.*
+
+# ถ้ามีโฟลเดอร์ test/temp
+test/
+tests/
+tmp/
+temp/
+
+
+# ============================================================
+# ⚠️ หมายเหตุ:
+# - รายการทั้งหมดนี้จะไม่ขึ้น GitHub
+# - ถ้าอยาก ignore เพิ่ม เติมบรรทัดใหม่ด้านล่าง
+# - ถ้าอยาก force add ไฟล์ที่อยู่ใน ignore:
+#     git add -f ชื่อไฟล์
+# ============================================================

@@ -34,8 +34,10 @@ echo.
 :: Step 3: Commit
 :: ============================================================
 echo [3/6] Committing...
+set "COMMIT_MSG="
 set /p COMMIT_MSG="Commit message: "
-if "%COMMIT_MSG%"=="" set COMMIT_MSG=Auto-update
+if not defined COMMIT_MSG set "COMMIT_MSG=Auto-update"
+set "COMMIT_MSG=%COMMIT_MSG:"='%"
 "%GIT%" commit -m "%COMMIT_MSG%"
 if %errorlevel% neq 0 (
     echo.
@@ -89,8 +91,9 @@ if %errorlevel% neq 0 (
     echo.
     echo [Error] Push failed. Check message above.
     echo.
-    echo [Tip] Try running this command manually:
-    echo       PortableGit\bin\git.exe push origin main --force
+    echo [Tip] Check the message above. If someone else pushed in the meantime,
+    echo       run this script again. Do NOT force-push unless you are sure it
+    echo       will not overwrite someone else's work.
     echo.
     pause
     exit /b 1

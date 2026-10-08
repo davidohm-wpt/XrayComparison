@@ -108,10 +108,6 @@ if exist "!REPO!\.git" (
     echo Initial download completed.
 )
 
-if exist "!ROOT!web\index.html" (
-    echo [Info] The old "web" folder next to this file is no longer used and can be deleted.
-)
-
 :update_done
 
 :: Make sure the web files exist
@@ -122,6 +118,19 @@ if not exist "!SRC!web\index.html" (
     echo.
     pause
     exit /b 1
+)
+
+:: Remove the old "web" folder left by previous versions (no longer used).
+:: Only runs on sales machines, and only after the new files are confirmed above.
+if "!DEV_MODE!"=="0" (
+    if exist "!ROOT!web\" (
+        rmdir /s /q "!ROOT!web" >nul 2>&1
+        if exist "!ROOT!web\" (
+            echo [Info] Could not delete the old "web" folder - you can delete it manually.
+        ) else (
+            echo [Info] Old "web" folder removed.
+        )
+    )
 )
 
 :: ============================================================

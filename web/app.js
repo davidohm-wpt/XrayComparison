@@ -3,7 +3,7 @@
    4 Brands + 4-way Compare + Export PDF
    ============================================================ */
 
-console.log("app.js v1.7.0 loaded — 4 brands + 4-way Compare + Export PDF");
+console.log("app.js v1.7.1 loaded — 4 brands + 4-way Compare + Export PDF");
 
 /* ---------- Version ---------- */
 fetch('VERSION.txt?t=' + Date.now())
@@ -15,7 +15,11 @@ fetch('VERSION.txt?t=' + Date.now())
     if (badge) badge.textContent = 'v' + cleanVersion;
     if (footer) footer.textContent = 'v' + cleanVersion;
   })
-  .catch(err => console.log('Version skipped:', err.message));
+  .catch(err => {
+    console.log('Version skipped:', err.message);
+    const badge = document.getElementById('version_badge');
+    if (badge) badge.style.display = 'none';
+  });
 
 /* ============================================================
    State
@@ -37,36 +41,18 @@ let compareSelection = [];
 
 const MAX_COMPARE = 4;
 
-function getCurrentModels() {
-  if (currentBrand === 'Wipotec') return modelsWipotec;
-  if (currentBrand === 'Mettler-Toledo') return modelsMettlerToledo;
-  if (currentBrand === 'Ishida') return modelsIshida;
-  return [...modelsAnritsu, ...modelsXR76];
-}
-function getModel(brand, index) {
-  if (brand === 'Wipotec') return modelsWipotec[index];
-  if (brand === 'Mettler-Toledo') return modelsMettlerToledo[index];
-  if (brand === 'Ishida') return modelsIshida[index];
-  return [...modelsAnritsu, ...modelsXR76][index];
-}
-function getBrandShort(brand) {
-  if (brand === 'Wipotec') return 'WIPOTEC';
-  if (brand === 'Mettler-Toledo') return 'MT';
-  if (brand === 'Ishida') return 'ISHIDA';
-  return 'ANRITSU';
-}
-function getBrandLogo(brand) {
-  if (brand === 'Wipotec') return 'wipotec-logo.png';
-  if (brand === 'Mettler-Toledo') return 'mt-logo.png';
-  if (brand === 'Ishida') return 'ishida-logo.png';
-  return 'anritsu-logo.png';
-}
-function getBrandLabel(brand) {
-  if (brand === 'Wipotec') return 'WIPOTEC';
-  if (brand === 'Mettler-Toledo') return 'Mettler-Toledo';
-  if (brand === 'Ishida') return 'Ishida';
-  return 'Anritsu';
-}
+const BRANDS = {
+  'Wipotec':        { list: modelsWipotec,       short: 'WIPOTEC',  logo: 'wipotec-logo.png',  label: 'WIPOTEC' },
+  'Mettler-Toledo': { list: modelsMettlerToledo, short: 'MT',       logo: 'mt-logo.png',       label: 'Mettler-Toledo' },
+  'Ishida':         { list: modelsIshida,        short: 'ISHIDA',   logo: 'ishida-logo.png',   label: 'Ishida' },
+  'Anritsu':        { list: [...modelsAnritsu, ...modelsXR76], short: 'ANRITSU', logo: 'anritsu-logo.png', label: 'Anritsu' }
+};
+
+function getCurrentModels()   { return BRANDS[currentBrand].list; }
+function getModel(brand, idx) { return BRANDS[brand].list[idx]; }
+function getBrandShort(brand) { return BRANDS[brand].short; }
+function getBrandLogo(brand)  { return BRANDS[brand].logo; }
+function getBrandLabel(brand) { return BRANDS[brand].label; }
 
 /* ============================================================
    Render cards
@@ -95,7 +81,7 @@ function renderCards() {
     `;
 
     card.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-compare-toggle')) {
+      if (e.target.closest('.btn-compare-toggle')) {
         e.stopPropagation();
         toggleCompare(index, card);
         return;
@@ -158,6 +144,33 @@ function translateValue(value) {
     result = result.replace(regex, map[enTerm]);
   });
   return result;
+}
+
+/* Translate text segments only (before, between and after tags) */
+function translateHTML(html) {
+  return html.split(/(<[^>]+>)/)
+    .map(part => part.startsWith('<') ? part : translateValue(part))
+    .join('');
+}
+
+/* Resolve a relative path (image/logo) to an absolute URL - works on file:// and sub-folders */
+const abs = p => new URL(p, location.href).href;
+
+/* Normalise a spec value for comparison (ignore tags, case, extra spaces) */
+function normSpec(s) {
+  return s.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+/* Build one comparison row: values + whether all present values are the same */
+function buildRowValues(items, labelKey) {
+  const values = items.map(item => {
+    const raw = item.m.specs[labelKey];
+    const missing = !raw;
+    return { html: missing ? '—' : raw, missing, norm: missing ? '' : normSpec(raw) };
+  });
+  const present = values.filter(v => !v.missing);
+  const allSame = present.every(v => v.norm === present[0].norm);
+  return { values, allSame };
 }
 
 /* ---------- Apply language ---------- */
@@ -234,10 +247,7 @@ function showDetail(index, cardEl) {
   let rows = '';
   for (const [labelKey, value] of Object.entries(model.specs)) {
     const translatedLabel = tLabel(labelKey);
-    const translatedValue = value.replace(/>([^<]+)</g, (m, text) => `>${translateValue(text)}<`);
-    const finalValue = translatedValue.includes('<')
-      ? translatedValue
-      : translateValue(translatedValue);
+    const finalValue = translateHTML(value);
 
     rows += `
       <div class="spec-row">
@@ -349,18 +359,10 @@ function showCompare() {
 
   let rows = '';
   allKeys.forEach(labelKey => {
-    const values = items.map(item => {
-      const raw = item.m.specs[labelKey] || '—';
-      const translated = raw.replace(/>([^<]+)</g, (m, text) => `>${translateValue(text)}<`);
-      const plain = raw.replace(/<[^>]*>/g, '').trim();
-      return { raw, translated, plain };
-    });
-
-    const firstPlain = values[0].plain;
-    const allSame = values.every(v => v.plain === firstPlain);
+    const { values, allSame } = buildRowValues(items, labelKey);
 
     const cells = values.map(v =>
-      `<td class="${allSame ? '' : 'different'}">${v.translated}</td>`
+      `<td class="${allSame || v.missing ? '' : 'different'}">${translateHTML(v.html)}</td>`
     ).join('');
 
     rows += `
@@ -454,10 +456,14 @@ function exportComparePDF(items, itemCount) {
   const btn = document.getElementById('btnExportPdf');
   const originalText = btn.innerHTML;
   btn.disabled = true;
-  btn.innerHTML = '⏳ Generating...';
+  btn.innerHTML = '⏳ …';
 
   try {
     const printWindow = window.open('', '_blank');
+    if (!printWindow) {
+      alert('Please allow pop-ups for this page to export the PDF.');
+      return;
+    }
 
     let rows = '';
     const allKeys = [...Object.keys(items[0].m.specs)];
@@ -468,16 +474,10 @@ function exportComparePDF(items, itemCount) {
     });
 
     allKeys.forEach(labelKey => {
-      const values = items.map(item => {
-        const raw = item.m.specs[labelKey] || '—';
-        const plain = raw.replace(/<[^>]*>/g, '').trim();
-        return { raw, plain };
-      });
-      const firstPlain = values[0].plain;
-      const allSame = values.every(v => v.plain === firstPlain);
+      const { values, allSame } = buildRowValues(items, labelKey);
 
       const cells = values.map(v =>
-        `<td class="${allSame ? '' : 'different'}">${v.raw}</td>`
+        `<td class="${allSame || v.missing ? '' : 'different'}">${translateHTML(v.html)}</td>`
       ).join('');
 
       rows += `<tr><th>${tLabel(labelKey)}</th>${cells}</tr>`;
@@ -485,7 +485,7 @@ function exportComparePDF(items, itemCount) {
 
     const imageCells = items.map(item => {
       const img = item.m.image
-        ? `<img src="${window.location.origin}/${item.m.image}" alt="${item.m.name}" crossorigin="anonymous">`
+        ? `<img src="${abs(item.m.image)}" alt="${item.m.name}">`
         : `<div class="no-img">No image</div>`;
       return `
         <div class="img-cell">
@@ -498,7 +498,7 @@ function exportComparePDF(items, itemCount) {
     const thCells = items.map(item =>
       `<th>
         <div class="th-name">${item.m.name}</div>
-        <div class="th-brand"><img src="${window.location.origin}/${item.logo}" alt="${item.brandLabel}"></div>
+        <div class="th-brand"><img src="${abs(item.logo)}" alt="${item.brandLabel}"></div>
       </th>`
     ).join('');
 
@@ -567,7 +567,7 @@ function exportComparePDF(items, itemCount) {
       </head>
       <body>
         <div class="header">
-          <img src="${window.location.origin}/wipotec-logo.png" alt="WIPOTEC">
+          <img src="${abs('wipotec-logo.png')}" alt="WIPOTEC">
           <h1>${t('compareTitle')}</h1>
           <div class="date">${dateStr}</div>
         </div>
@@ -585,7 +585,9 @@ function exportComparePDF(items, itemCount) {
 
         <script>
           window.addEventListener('load', function() {
-            setTimeout(function() { window.print(); }, 500);
+            Promise.all(Array.prototype.map.call(document.images, function(i) {
+              return i.complete ? null : new Promise(function(r) { i.onload = i.onerror = r; });
+            })).then(function() { setTimeout(function() { window.print(); }, 200); });
           });
         <\/script>
       </body>

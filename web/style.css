@@ -904,3 +904,9 @@ footer strong { color: var(--teal-dark); }
   .compare-table.compare-4 tbody th { width: 25%; }
   .compare-table.compare-4 td { width: 18.75%; }
 }
+
+/* ---------- Print (Ctrl+P from the page) ---------- */
+@media print {
+  .lang-switch, .brand-switch, .model-grid, .compare-tray, .intro,
+  .btn-export-pdf, .btn-close-compare { display: none !important; }
+}

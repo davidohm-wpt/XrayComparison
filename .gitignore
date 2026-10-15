@@ -232,3 +232,5 @@ _temp_clone/
 # - ถ้าอยาก force add ไฟล์ที่อยู่ใน ignore:
 #     git add -f ชื่อไฟล์
 # ============================================================
+Push.bat
+Run_Comparison.bat

@@ -203,6 +203,13 @@ main {
   opacity: 0.75;
 }
 
+/* Keep the model name clear of the +/check button in the card corner */
+.model-card .card-name {
+  display: block;
+  padding: 0 22px;
+  overflow-wrap: anywhere;
+}
+
 /* ---------- Compare toggle button ---------- */
 .btn-compare-toggle {
   position: absolute;

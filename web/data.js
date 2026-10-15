@@ -213,9 +213,9 @@ const modelsWipotec = [
     "Max. Transport Weight": "10 kg", "Display": "15\" Color TFT w/ touch screen",
     "Temperature Range": "+5 to +35°C; +5 to +40°C <span class='opt'>(Opt)</span>",
     "Construction Frame": "Stainless Steel", "IP Rating": "IP65 (Cabinet fan on the back IP54)",
-    "Power Supply": "230 Vac; 150 Vac <span class='opt'>(Opt)</span>", "SCCR": "5 kA",
+    "Power Supply": "230 Vac", "SCCR": "5 kA",
     "Weight": "Approx. 400 kg", "Memory Capacity": "100",
-    "Conveyor Height": "750-850 / 850-950 mm", "Overall Height": "—", "Max. Product Height": "130 mm",
+    "Conveyor Height": "650-750 / 750-850 / 850-950 / 950-1050 mm", "Overall Height": "—", "Max. Product Height": "130 mm",
     "Conveyor Length": "800 / 1500 / 1800 mm", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC 30/40", tag: "Top-Down", image: "img/SC-30-40.png", specs: {
@@ -255,12 +255,12 @@ const modelsWipotec = [
     "IP Rating": "IP65 (Cabinet fan on the back IP54)", "Power Supply": "230 Vac", "SCCR": "5 kA",
     "Weight": "Approx. 400 kg", "Memory Capacity": "100",
     "Conveyor Height": "650-750 / 750-850 / 850-950 / 950-1050 mm", "Overall Height": "—",
-    "Max. Product Height": "110 mm", "Conveyor Length": "700-2100 mm (by 100 mm incremental)", "Belt Width": "—", "Detection Area": "—"
+    "Max. Product Height": "110 mm", "Conveyor Length": "500-2100 mm (by 100 mm incremental; 500 / 600 mm without reject)", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC 5000/6000", tag: "Top-Down", image: "img/SC-30-40.png", specs: {
     "Orientation": "Top-Down", "Output Power": "600 W", "HV Voltage (Infinitely variable)": "60 kV or 75 kV",
     "HV Current (Infinitely variable)": "8 mA or 10 mA", "Cooling System": "Internal Closed Loop cooling",
-    "Sensor Technology": "VioX - TDi", "Resolution": "VioX 0.1 mm", "Scanning Speed": "49 m/min (Depending on options)",
+    "Sensor Technology": "VioX - TDi", "Resolution": "VioX 0.1 mm", "Scanning Speed": "Up to 120 m/min (Diode); 49 m/min (VioX - TDi)",
     "Drive": "I-Mot3", "Max. Transport Weight": "—", "Display": "15\" Color TFT w/ touch screen",
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel",
     "IP Rating": "IP65 (Except for Air-Water cooled units)", "Power Supply": "400 Vac 3 Phase", "SCCR": "5 kA",
@@ -288,7 +288,7 @@ const modelsWipotec = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel",
     "IP Rating": "IP65 (Except for Air-Water cooled units)", "Power Supply": "400 Vac 3 Phase", "SCCR": "5 kA",
     "Weight": "Approx. 1,900 kg", "Memory Capacity": "100",
-    "Conveyor Height": "750-900 / 800-950 / 900-1050 mm", "Overall Height": "—",
+    "Conveyor Height": "750-900 / 850-1000 / 950-1100 mm", "Overall Height": "—",
     "Max. Product Height": "270 mm; Max dia 140 mm", "Conveyor Length": "Customized", "Belt Width": "—", "Detection Area": "—"
   }}
 ];/* ============================================================
@@ -324,7 +324,7 @@ const modelsMettlerToledo = [
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X16", tag: "Top-Down", image: "img/X16.png", specs: {
-    "Orientation": "Top-Down", "Output Power": "150 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
+    "Orientation": "Top-Down", "Output Power": "100 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA (100W) / 5.0 mA (420W)",
     "Cooling System": "Air Cooled (100W); AC Unit & Radiator Pump (420W)",
     "Sensor Technology": "Diode (HiGain+)", "Resolution": "0.4 mm / 0.8 mm",
@@ -361,7 +361,7 @@ const modelsMettlerToledo = [
     "Launch Year": "2022 (Feb 2022)", "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X36", tag: "Top-Down", image: "img/X36.png", specs: {
-    "Orientation": "Top-Down", "Output Power": "100 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
+    "Orientation": "Top-Down", "Output Power": "100 W / 300 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA (100W) / 3.0 mA (300W) / 5.0 mA (420W)",
     "Cooling System": "Air Cooled (100W); AC Unit & Radiator Pump (420W)",
     "Sensor Technology": "Diode / Dual Energy (DXD/DXD+ Opt)",
@@ -395,7 +395,7 @@ const modelsMettlerToledo = [
     "Cooling System": "Air Cooled (100W); AC Unit & Radiator Pump (420W)",
     "Sensor Technology": "Diode (HiGain+)", "Resolution": "0.4 mm; 0.8 mm <span class='opt'>(Opt)</span>",
     "Scanning Speed": "Max. 60 m/min; Mass up to 14,000 kg/hr", "Drive": "SEW Geared Motor",
-    "Max. Transport Weight": "Bulk mass flow up to 5,000 kg/hr", "Display": "15.6\" Color TFT Touchscreen",
+    "Max. Transport Weight": "Bulk mass flow up to 14,000 kg/hr", "Display": "15.6\" Color TFT Touchscreen",
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304 / 316L", "IP Rating": "IP65 / IP69k (Product zone)",
     "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 450 - 550 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
@@ -877,7 +877,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- XR75 Single Energy — Large (2 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 Large/Case (AWHSE)", tag: "Top-Down (Large)", image: "img/XR75-Large.png", specs: {
+  { brand: "Anritsu", name: "XR75 Large/Case (AWHSE)", tag: "Top-Down (Large, 0.4 mm sphere)", image: "img/XR75-Large.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -890,7 +890,7 @@ const modelsAnritsu = [
     "Conveyor Height": "700-800 mm", "Overall Height": "—", "Max. Product Height": "250 mm (Option: 350 mm)",
     "Conveyor Length": "—", "Belt Width": "620 mm", "Detection Area": "590 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Large/Case (WHSG)", tag: "Top-Down (Large)", image: "img/XR75-Large.png", specs: {
+  { brand: "Anritsu", name: "XR75 Large/Case (AWHSG)", tag: "Top-Down (Large, 0.5 mm sphere)", image: "img/XR75-Large.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",

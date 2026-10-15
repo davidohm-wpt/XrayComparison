@@ -459,12 +459,6 @@ function exportComparePDF(items, itemCount) {
   btn.innerHTML = '⏳ …';
 
   try {
-    const printWindow = window.open('', '_blank');
-    if (!printWindow) {
-      alert('Please allow pop-ups for this page to export the PDF.');
-      return;
-    }
-
     let rows = '';
     const allKeys = [...Object.keys(items[0].m.specs)];
     items.slice(1).forEach(item => {
@@ -594,16 +588,41 @@ function exportComparePDF(items, itemCount) {
       </html>
     `;
 
-    printWindow.document.write(html);
-    printWindow.document.close();
+    // 1) Ask the local server to render a real PDF (no print dialog)
+    const pdfHtml = html.replace(/<script>[\s\S]*<\/script>/, '');
+    fetch('/api/pdf', { method: 'POST', headers: { 'Content-Type': 'text/html; charset=utf-8' }, body: pdfHtml })
+      .then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.blob();
+      })
+      .then(blob => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'XRay-Comparison-' + new Date().toISOString().slice(0, 10) + '.pdf';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+      })
+      .catch(() => {
+        // 2) Fallback: classic print window
+        const printWindow = window.open('', '_blank');
+        if (!printWindow) {
+          alert('Please allow pop-ups for this page to export the PDF.');
+          return;
+        }
+        printWindow.document.write(html);
+        printWindow.document.close();
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+      });
 
   } catch (err) {
     alert('Error generating PDF: ' + err.message);
-  } finally {
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.innerHTML = originalText;
-    }, 1500);
+    btn.disabled = false;
+    btn.innerHTML = originalText;
   }
 }
 

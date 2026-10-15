@@ -629,5 +629,13 @@ function exportComparePDF(items, itemCount) {
 /* ============================================================
    Start
    ============================================================ */
+// Credit (bottom-right)
+(function () {
+  const c = document.createElement('div');
+  c.className = 'credit';
+  c.textContent = 'Created by Krisik Khuntee';
+  document.body.appendChild(c);
+})();
+
 renderCards();
 applyLanguage();

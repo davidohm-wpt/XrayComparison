@@ -917,3 +917,11 @@ footer strong { color: var(--teal-dark); }
   .lang-switch, .brand-switch, .model-grid, .compare-tray, .intro,
   .btn-export-pdf, .btn-close-compare { display: none !important; }
 }
+
+/* ---------- Credit ---------- */
+.credit {
+  position: fixed; right: 12px; bottom: 8px;
+  font-size: 11px; color: #9a9a9a; opacity: .8;
+  pointer-events: none; z-index: 5;
+}
+@media print { .credit { display: none !important; } }

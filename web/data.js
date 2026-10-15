@@ -36,9 +36,12 @@ const translations = {
       "SCCR": "SCCR",
       "Weight": "Weight",
       "Memory Capacity": "Memory Capacity",
-      "Work Height": "Work Height",
+      "Conveyor Height": "Conveyor Height (Pass-line)",
+      "Overall Height": "Overall Height",
       "Max. Product Height": "Max. Product Height",
-      "Transport Length": "Transport Length",
+      "Conveyor Length": "Conveyor Length",
+      "Belt Width": "Belt Width",
+      "Detection Area": "Detection Area",
       "Launch Year": "Launch Year",
       "Warranty & Service Contract Conditions": "Warranty & Service Contract Conditions"
     },
@@ -99,9 +102,12 @@ const translations = {
       "SCCR": "SCCR",
       "Weight": "น้ำหนักเครื่อง",
       "Memory Capacity": "ความจุหน่วยความจำ",
-      "Work Height": "ความสูงงาน",
+      "Conveyor Height": "ความสูงสายพาน (Pass-line)",
+      "Overall Height": "ความสูงรวมของเครื่อง",
       "Max. Product Height": "ความสูงสินค้าสูงสุด",
-      "Transport Length": "ความยาวระบบลำเลียง",
+      "Conveyor Length": "ความยาวสายพาน",
+      "Belt Width": "ความกว้างสายพาน",
+      "Detection Area": "พื้นที่ตรวจจับ",
       "Launch Year": "ปีที่เปิดตัว",
       "Warranty & Service Contract Conditions": "เงื่อนไขการรับประกันและสัญญาบริการ"
     },
@@ -162,9 +168,12 @@ const translations = {
       "SCCR": "短路电流额定值",
       "Weight": "重量",
       "Memory Capacity": "存储容量",
-      "Work Height": "工作高度",
+      "Conveyor Height": "输送带高度 (Pass-line)",
+      "Overall Height": "整机高度",
       "Max. Product Height": "最大产品高度",
-      "Transport Length": "输送长度",
+      "Conveyor Length": "输送带长度",
+      "Belt Width": "输送带宽度",
+      "Detection Area": "检测区域",
       "Launch Year": "发布年份",
       "Warranty & Service Contract Conditions": "保修和服务合同条款"
     },
@@ -206,8 +215,8 @@ const modelsWipotec = [
     "Construction Frame": "Stainless Steel", "IP Rating": "IP65 (Cabinet fan on the back IP54)",
     "Power Supply": "230 Vac; 150 Vac <span class='opt'>(Opt)</span>", "SCCR": "5 kA",
     "Weight": "Approx. 400 kg", "Memory Capacity": "100",
-    "Work Height": "750-850 / 850-950 mm", "Max. Product Height": "130 mm",
-    "Transport Length": "800 / 1500 / 1800 mm"
+    "Conveyor Height": "750-850 / 850-950 mm", "Overall Height": "—", "Max. Product Height": "130 mm",
+    "Conveyor Length": "800 / 1500 / 1800 mm", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC 30/40", tag: "Top-Down", image: "img/SC-30-40.png", specs: {
     "Orientation": "Top-Down", "Output Power": "200 W / 600 W",
@@ -220,8 +229,8 @@ const modelsWipotec = [
     "Temperature Range": "+5 to +35°C; +5 to +40°C <span class='opt'>(Opt)</span>",
     "Construction Frame": "Stainless Steel", "IP Rating": "IP65 (Cabinet fan on the back IP54)",
     "Power Supply": "230 Vac", "SCCR": "5 kA", "Weight": "Approx. 400 kg", "Memory Capacity": "100",
-    "Work Height": "750-850 / 750-900 / 800-950 / 900-1050 / 1000-1150 / 1100-1250 mm",
-    "Max. Product Height": "With curtain 180 mm; W/o curtain 230 mm", "Transport Length": "Customized"
+    "Conveyor Height": "750-850 / 750-900 / 800-950 / 900-1050 / 1000-1150 / 1100-1250 mm", "Overall Height": "—",
+    "Max. Product Height": "With curtain 180 mm; W/o curtain 230 mm", "Conveyor Length": "Customized", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC-B 30", tag: "Top-Down", image: "img/SC-B-30.png", specs: {
     "Orientation": "Top-Down", "Output Power": "200 W", "HV Voltage (Infinitely variable)": "80 kV",
@@ -233,9 +242,9 @@ const modelsWipotec = [
     "Construction Frame": "Stainless Steel", "IP Rating": "IP65 (Cabinet fan on the back IP54)",
     "Power Supply": "230 Vac; 150 Vac <span class='opt'>(Opt)</span>", "SCCR": "5 kA",
     "Weight": "Approx. 500 kg", "Memory Capacity": "100",
-    "Work Height": "670-730 / 750-850 / 850-950 / 950-1050 mm",
+    "Conveyor Height": "670-730 / 750-850 / 850-950 / 950-1050 mm", "Overall Height": "—",
     "Max. Product Height": "Bulk height: 20 mm; Bulk width: 250 mm",
-    "Transport Length": "1490 / 1790 mm"
+    "Conveyor Length": "1490 / 1790 mm", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC 2000", tag: "Top-Down", image: "img/SC-2000.png", specs: {
     "Orientation": "Top-Down", "Output Power": "150 W", "HV Voltage (Infinitely variable)": "50 kV",
@@ -245,8 +254,8 @@ const modelsWipotec = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel",
     "IP Rating": "IP65 (Cabinet fan on the back IP54)", "Power Supply": "230 Vac", "SCCR": "5 kA",
     "Weight": "Approx. 400 kg", "Memory Capacity": "100",
-    "Work Height": "650-750 / 750-850 / 850-950 / 950-1050 mm",
-    "Max. Product Height": "110 mm", "Transport Length": "700-2100 mm (by 100 mm incremental)"
+    "Conveyor Height": "650-750 / 750-850 / 850-950 / 950-1050 mm", "Overall Height": "—",
+    "Max. Product Height": "110 mm", "Conveyor Length": "700-2100 mm (by 100 mm incremental)", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC 5000/6000", tag: "Top-Down", image: "img/SC-30-40.png", specs: {
     "Orientation": "Top-Down", "Output Power": "600 W", "HV Voltage (Infinitely variable)": "60 kV or 75 kV",
@@ -255,8 +264,8 @@ const modelsWipotec = [
     "Drive": "I-Mot3", "Max. Transport Weight": "—", "Display": "15\" Color TFT w/ touch screen",
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel",
     "IP Rating": "IP65 (Except for Air-Water cooled units)", "Power Supply": "400 Vac 3 Phase", "SCCR": "5 kA",
-    "Weight": "—", "Memory Capacity": "100", "Work Height": "750-850 / 800-900 / 850-950 mm",
-    "Max. Product Height": "—", "Transport Length": "Customized"
+    "Weight": "—", "Memory Capacity": "100", "Conveyor Height": "750-850 / 800-900 / 850-950 mm", "Overall Height": "—",
+    "Max. Product Height": "—", "Conveyor Length": "Customized", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC-S 4000", tag: "Side View", image: "img/SC-S-4000.png", specs: {
     "Orientation": "Side View", "Output Power": "600 W", "HV Voltage (Infinitely variable)": "75 kV",
@@ -267,8 +276,8 @@ const modelsWipotec = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel",
     "IP Rating": "IP65 (Except for Air-Water cooled units)", "Power Supply": "230 Vac", "SCCR": "5 kA",
     "Weight": "Approx. 500 kg", "Memory Capacity": "100",
-    "Work Height": "750-850 / 800-900 / 850-950 mm",
-    "Max. Product Height": "With curtain 246 mm; W/o curtain 303 mm", "Transport Length": "2,400 mm"
+    "Conveyor Height": "750-850 / 800-900 / 850-950 mm", "Overall Height": "—",
+    "Max. Product Height": "With curtain 246 mm; W/o curtain 303 mm", "Conveyor Length": "2,400 mm", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Wipotec", name: "SC-S 5020", tag: "Side View", image: "img/SC-S-5020.png", specs: {
     "Orientation": "Side View", "Output Power": "2 x 500 W", "HV Voltage (Infinitely variable)": "Max. 120 kV",
@@ -279,8 +288,8 @@ const modelsWipotec = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel",
     "IP Rating": "IP65 (Except for Air-Water cooled units)", "Power Supply": "400 Vac 3 Phase", "SCCR": "5 kA",
     "Weight": "Approx. 1,900 kg", "Memory Capacity": "100",
-    "Work Height": "750-900 / 800-950 / 900-1050 mm",
-    "Max. Product Height": "270 mm; Max dia 140 mm", "Transport Length": "Customized"
+    "Conveyor Height": "750-900 / 800-950 / 900-1050 mm", "Overall Height": "—",
+    "Max. Product Height": "270 mm; Max dia 140 mm", "Conveyor Length": "Customized", "Belt Width": "—", "Detection Area": "—"
   }}
 ];/* ============================================================
    Model data — Mettler-Toledo
@@ -297,8 +306,8 @@ const modelsMettlerToledo = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304",
     "IP Rating": "IP65", "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 250 - 300 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1050 mm", "Max. Product Height": "With overhead reject 180 mm // No reject 220 mm",
-    "Transport Length": "800 / 1200 / 1800 mm", "Launch Year": "2023 (Interpack / Sep 2023)",
+    "Conveyor Height": "750 - 1050 mm", "Overall Height": "—", "Max. Product Height": "With overhead reject 180 mm // No reject 220 mm",
+    "Conveyor Length": "800 / 1200 / 1800 mm", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2023 (Interpack / Sep 2023)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X13", tag: "Top-Down (Bulk Flow)", image: "img/X13.png", specs: {
@@ -310,8 +319,8 @@ const modelsMettlerToledo = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304 / 316L",
     "IP Rating": "IP65 (Cabinet) / IP69k (Product zone)", "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 400 - 500 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 950 mm", "Max. Product Height": "Bulk height: 20 - 50 mm; Bulk width: 300 - 400 mm",
-    "Transport Length": "Approx. 1500 - 1800 mm", "Launch Year": "2025 (Nov 2025 - X3 Series)",
+    "Conveyor Height": "750 - 950 mm", "Overall Height": "—", "Max. Product Height": "Bulk height: 20 - 50 mm; Bulk width: 300 - 400 mm",
+    "Conveyor Length": "Approx. 1500 - 1800 mm", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2025 (Nov 2025 - X3 Series)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X16", tag: "Top-Down", image: "img/X16.png", specs: {
@@ -324,8 +333,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304", "IP Rating": "IP65 (IP66 / IP69 Opt)",
     "Power Supply": "100 - 240 Vac (100W) / 208 - 240 Vac (420W)", "SCCR": "NA",
     "Weight": "Approx. 450 - 650 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1050 mm", "Max. Product Height": "Up to 250 - 300 mm (Aperture width 400 - 600 mm)",
-    "Transport Length": "1500 - 2200 mm", "Launch Year": "2024 (Pack Expo Nov 2024)",
+    "Conveyor Height": "750 - 1050 mm", "Overall Height": "—", "Max. Product Height": "Up to 250 - 300 mm (Aperture width 400 - 600 mm)",
+    "Conveyor Length": "1500 - 2200 mm", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2024 (Pack Expo Nov 2024)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X34", tag: "Top-Down", image: "img/X34.png", specs: {
@@ -336,8 +345,8 @@ const modelsMettlerToledo = [
     "Display": "10.1\" Touchscreen", "Temperature Range": "+5 to +40°C",
     "Construction Frame": "Stainless Steel 304", "IP Rating": "IP65", "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 250 - 350 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1050 mm", "Max. Product Height": "With overhead reject 150 mm // No reject 180 mm",
-    "Transport Length": "800 / 1200 / 1800 mm", "Launch Year": "2018 (Late 2018)",
+    "Conveyor Height": "750 - 1050 mm", "Overall Height": "—", "Max. Product Height": "With overhead reject 150 mm // No reject 180 mm",
+    "Conveyor Length": "800 / 1200 / 1800 mm", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2018 (Late 2018)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X34C", tag: "Top-Down", image: "img/X34C.png", specs: {
@@ -348,7 +357,7 @@ const modelsMettlerToledo = [
     "Display": "10.1\" Touchscreen", "Temperature Range": "+5 to +40°C",
     "Construction Frame": "Stainless Steel 304", "IP Rating": "IP65", "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 180 - 220 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1050 mm", "Max. Product Height": "Up to 80 - 100 mm", "Transport Length": "700 mm",
+    "Conveyor Height": "750 - 1050 mm", "Overall Height": "—", "Max. Product Height": "Up to 80 - 100 mm", "Conveyor Length": "700 mm", "Belt Width": "—", "Detection Area": "—",
     "Launch Year": "2022 (Feb 2022)", "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X36", tag: "Top-Down", image: "img/X36.png", specs: {
@@ -362,8 +371,8 @@ const modelsMettlerToledo = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304 / 316L", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "100 - 240 Vac (208-240 Vac for 420W)", "SCCR": "NA",
     "Weight": "Approx. 400 - 550 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1100 mm", "Max. Product Height": "Up to 250 mm (Depending on aperture)",
-    "Transport Length": "1200 - 2400 mm / Customized", "Launch Year": "2014 (Interpack 2014)",
+    "Conveyor Height": "750 - 1100 mm", "Overall Height": "—", "Max. Product Height": "Up to 250 mm (Depending on aperture)",
+    "Conveyor Length": "1200 - 2400 mm / Customized", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2014 (Interpack 2014)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X36.2", tag: "Top-Down", image: "img/X36.2.png", specs: {
@@ -376,8 +385,8 @@ const modelsMettlerToledo = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304 / 316L", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "100 - 240 Vac (208-240 Vac for 420W)", "SCCR": "NA",
     "Weight": "Approx. 420 - 580 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1100 mm", "Max. Product Height": "Up to 250 mm",
-    "Transport Length": "1200 - 2400 mm / Customized", "Launch Year": "2024 (Nov 2024)",
+    "Conveyor Height": "750 - 1100 mm", "Overall Height": "—", "Max. Product Height": "Up to 250 mm",
+    "Conveyor Length": "1200 - 2400 mm / Customized", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2024 (Nov 2024)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X36 Bulk", tag: "Top-Down (Bulk Flow)", image: "img/X36.png", specs: {
@@ -390,8 +399,8 @@ const modelsMettlerToledo = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304 / 316L", "IP Rating": "IP65 / IP69k (Product zone)",
     "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 450 - 550 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 950 mm", "Max. Product Height": "Bulk height: 20 - 50 mm; Bulk width: 300 - 600 mm",
-    "Transport Length": "Approx. 1600 - 2000 mm", "Launch Year": "2015",
+    "Conveyor Height": "750 - 950 mm", "Overall Height": "—", "Max. Product Height": "Bulk height: 20 - 50 mm; Bulk width: 300 - 600 mm",
+    "Conveyor Length": "Approx. 1600 - 2000 mm", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2015",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X52", tag: "Top-Down", image: "img/X52.png", specs: {
@@ -403,8 +412,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304", "IP Rating": "IP65 (IP66 / IP69 Opt)",
     "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 350 - 450 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1050 mm", "Max. Product Height": "Up to 180 - 200 mm",
-    "Transport Length": "800 / 1300 / 1800 / 2000 mm", "Launch Year": "2024 (Oct 2024)",
+    "Conveyor Height": "750 - 1050 mm", "Overall Height": "—", "Max. Product Height": "Up to 180 - 200 mm",
+    "Conveyor Length": "800 / 1300 / 1800 / 2000 mm", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2024 (Oct 2024)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X53", tag: "Top-Down (Bulk Flow)", image: "img/X53.png", specs: {
@@ -416,8 +425,8 @@ const modelsMettlerToledo = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304 / 316L", "IP Rating": "IP65 / IP69k (Washdown area)",
     "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 450 - 550 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 950 mm", "Max. Product Height": "Bulk layer: 20 - 50 mm; Belt width: 300 - 400 mm",
-    "Transport Length": "Approx. 1500 - 1800 mm", "Launch Year": "2025 (Nov 2025 - X3 Series DE)",
+    "Conveyor Height": "750 - 950 mm", "Overall Height": "—", "Max. Product Height": "Bulk layer: 20 - 50 mm; Belt width: 300 - 400 mm",
+    "Conveyor Length": "Approx. 1500 - 1800 mm", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2025 (Nov 2025 - X3 Series DE)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X56", tag: "Top-Down", image: "img/X56.png", specs: {
@@ -429,8 +438,8 @@ const modelsMettlerToledo = [
     "Temperature Range": "+5 to +40°C", "Construction Frame": "Stainless Steel 304 / 316L", "IP Rating": "IP65 / IP66 (IP69 Opt)",
     "Power Supply": "208 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 550 - 750 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1050 mm", "Max. Product Height": "Up to 250 - 300 mm (Max product width 480 mm)",
-    "Transport Length": "1500 - 2400 mm / Customized", "Launch Year": "2026 (Jun 2026)",
+    "Conveyor Height": "750 - 1050 mm", "Overall Height": "—", "Max. Product Height": "Up to 250 - 300 mm (Max product width 480 mm)",
+    "Conveyor Length": "1500 - 2400 mm / Customized", "Belt Width": "—", "Detection Area": "—", "Launch Year": "2026 (Jun 2026)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X3710", tag: "Side View (Single Horizontal Beam)", image: "img/X3710.png", specs: {
@@ -443,8 +452,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 300 - 400 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1100 mm", "Max. Product Height": "Up to 280 mm",
-    "Transport Length": "Straddles customer conveyor (~1200 - 1500 mm tunnel)",
+    "Conveyor Height": "750 - 1100 mm", "Overall Height": "—", "Max. Product Height": "Up to 280 mm",
+    "Conveyor Length": "Straddles customer conveyor (~1200 - 1500 mm tunnel)", "Belt Width": "—", "Detection Area": "—",
     "Launch Year": "2015 (Jan 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X3720", tag: "Side View (Single Horizontal Beam)", image: "img/X3720.png", specs: {
@@ -457,8 +466,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304 (316L Opt)", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 400 - 500 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1150 mm", "Max. Product Height": "Up to 270 mm (Tall cans, plastics)",
-    "Transport Length": "Approx. 1200 - 1800 mm (Line straddling)",
+    "Conveyor Height": "750 - 1150 mm", "Overall Height": "—", "Max. Product Height": "Up to 270 mm (Tall cans, plastics)",
+    "Conveyor Length": "Approx. 1200 - 1800 mm (Line straddling)", "Belt Width": "—", "Detection Area": "—",
     "Launch Year": "2015 (Jan 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X3725", tag: "Side View (Single Horizontal Beam)", image: "img/X3725.png", specs: {
@@ -471,8 +480,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304 (316L Opt)", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "100 - 240 Vac Single Phase", "SCCR": "NA",
     "Weight": "Approx. 550 - 700 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "950 / 1050 / 1150 mm (+/- 50 mm)", "Max. Product Height": "Up to 270 - 280 mm (Diameter up to 188 mm)",
-    "Transport Length": "4,500 - 5,200 mm (Full-length integrated conveyor)",
+    "Conveyor Height": "950 / 1050 / 1150 mm (+/- 50 mm)", "Overall Height": "—", "Max. Product Height": "Up to 270 - 280 mm (Diameter up to 188 mm)",
+    "Conveyor Length": "4,500 - 5,200 mm (Full-length integrated conveyor)", "Belt Width": "—", "Detection Area": "—",
     "Launch Year": "2015 (Mid 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X3730", tag: "Side View (Split-Beam)", image: "img/X3730.png", specs: {
@@ -485,8 +494,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304 (316L Opt)", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "100 - 240 Vac (208-240 Vac for 420W)", "SCCR": "NA",
     "Weight": "Approx. 450 - 600 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "750 - 1150 mm", "Max. Product Height": "Up to 270 mm (Glass / metal cans)",
-    "Transport Length": "Approx. 1800 - 2400 mm (Line straddling)",
+    "Conveyor Height": "750 - 1150 mm", "Overall Height": "—", "Max. Product Height": "Up to 270 mm (Glass / metal cans)",
+    "Conveyor Length": "Approx. 1800 - 2400 mm (Line straddling)", "Belt Width": "—", "Detection Area": "—",
     "Launch Year": "2015 (Jan 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X3735", tag: "Side View (Split-Beam)", image: "img/X3735.png", specs: {
@@ -499,8 +508,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304 (316L Opt)", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "100 - 240 Vac (208-240 Vac for 420W)", "SCCR": "NA",
     "Weight": "Approx. 600 - 750 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "950 / 1050 / 1150 mm (+/- 50 mm)", "Max. Product Height": "Up to 270 - 280 mm",
-    "Transport Length": "4,500 - 5,200 mm (Full-length integrated conveyor)",
+    "Conveyor Height": "950 / 1050 / 1150 mm (+/- 50 mm)", "Overall Height": "—", "Max. Product Height": "Up to 270 - 280 mm",
+    "Conveyor Length": "4,500 - 5,200 mm (Full-length integrated conveyor)", "Belt Width": "—", "Detection Area": "—",
     "Launch Year": "2015 (Mid 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
   { brand: "Mettler-Toledo", name: "X3750", tag: "Side View (Angle Beam)", image: "img/X3750.png", specs: {
@@ -513,8 +522,8 @@ const modelsMettlerToledo = [
     "Construction Frame": "Stainless Steel 304 / 316L", "IP Rating": "IP65 (IP69 Opt)",
     "Power Supply": "208-240 Vac for 420W", "SCCR": "NA",
     "Weight": "Approx. 1,000 - 1,400 kg", "Memory Capacity": "> 100 products (Unlimited IPC)",
-    "Work Height": "950 / 1050 / 1150 mm (+/- 50 mm)", "Max. Product Height": "Up to 270 - 300 mm (Max jar dia 130 - 150 mm)",
-    "Transport Length": "4,500 - 5,200 mm (Full-length integrated conveyor)",
+    "Conveyor Height": "950 / 1050 / 1150 mm (+/- 50 mm)", "Overall Height": "—", "Max. Product Height": "Up to 270 - 300 mm (Max jar dia 130 - 150 mm)",
+    "Conveyor Length": "4,500 - 5,200 mm (Full-length integrated conveyor)", "Belt Width": "—", "Detection Area": "—",
     "Launch Year": "2016 (Mar 2016 Glass-in-Glass)", "Warranty & Service Contract Conditions": mtWarranty
   }}
 ];/* ============================================================
@@ -530,8 +539,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP54 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 450W", "SCCR": "—",
     "Weight": "250 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 270 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-EN-2493", tag: "Top-Down", image: "img/IX-EN.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30/35/40/45/50/55/60/65/70/75 kV",
@@ -542,8 +551,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP54 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 500W", "SCCR": "—",
     "Weight": "265 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 270 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-EN-2493-C", tag: "Top-Down (Compact)", image: "img/IX-EN-2493-C.png", specs: {
     "Orientation": "Top-Down (Compact)", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30/35/40/45/50/55/60/65/70/75 kV",
@@ -554,8 +563,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP54 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 500W", "SCCR": "—",
     "Weight": "265 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "30 mm",
-    "Transport Length": "1115 × 160 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "30 mm",
+    "Conveyor Length": "1115 mm", "Belt Width": "160 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-EN-24A1", tag: "Top-Down", image: "img/IX-EN-24A1.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "25-75 kV",
@@ -566,8 +575,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Inspection Chamber)",
     "Power Supply": "Single-phase AC 200V, 500W, 3.0A", "SCCR": "—",
     "Weight": "265 kg", "Memory Capacity": "200 items",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 270 mm",
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "X-ray tube + line sensor: 15,000 hours or 3 years (whichever comes first)"
   }},
   { brand: "Ishida", name: "IX-EN-4062", tag: "Top-Down", image: "img/IX-EN.png", specs: {
@@ -579,8 +588,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP54 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 450W", "SCCR": "—",
     "Weight": "290 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 430 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-EN-4093", tag: "Top-Down", image: "img/IX-EN.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30/35/40/45/50/55/60/65/70/75 kV",
@@ -591,8 +600,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP54 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 500W", "SCCR": "—",
     "Weight": "290 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 430 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-EN-5592", tag: "Top-Down (Large)", image: "img/IX-EN-5592.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-90 kV",
@@ -603,8 +612,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel 304", "IP Rating": "IP66 (Conveyor) / IP54 (Enclosure, IP65 opt)",
     "Power Supply": "Single-phase AC 200-240V, 50/60Hz, 1150W", "SCCR": "—",
     "Weight": "500 kg", "Memory Capacity": "—",
-    "Work Height": "750 mm ± 50", "Max. Product Height": "270 mm",
-    "Transport Length": "1200 × 600 mm"
+    "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "270 mm",
+    "Conveyor Length": "1200 mm", "Belt Width": "600 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GN-2443", tag: "Top-Down", image: "img/IX-GN-2443.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
@@ -615,8 +624,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP65 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 1000W (1150W)", "SCCR": "—",
     "Weight": "285 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 270 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GN-2444", tag: "Top-Down", image: "img/IX-GN-2443.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
@@ -627,8 +636,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP65 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 1150W", "SCCR": "—",
     "Weight": "285 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 270 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GN-4043", tag: "Top-Down", image: "img/IX-GN.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
@@ -639,8 +648,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP65 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 1000W (1150W)", "SCCR": "—",
     "Weight": "315 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 430 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GN-4044", tag: "Top-Down", image: "img/IX-GN.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
@@ -651,8 +660,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP65 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 1150W", "SCCR": "—",
     "Weight": "315 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 430 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GN-4044A", tag: "Top-Down", image: "img/IX-GN.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
@@ -663,8 +672,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP65 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, 1150W", "SCCR": "—",
     "Weight": "315 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "220 mm",
-    "Transport Length": "800 × 430 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "220 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GN-5523", tag: "Top-Down (Large)", image: "img/IX-GN.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "40-100 kV",
@@ -675,8 +684,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP54 (Enclosure)",
     "Power Supply": "Single-phase AC 200-240V, 50/60Hz, 12A, 1900W", "SCCR": "—",
     "Weight": "500 kg", "Memory Capacity": "—",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "270 mm",
-    "Transport Length": "1200 × 600 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "270 mm",
+    "Conveyor Length": "1200 mm", "Belt Width": "600 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-G2-2427", tag: "Top-Down (Dual Energy)", image: "img/IX-G2.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "Max. 100 kV",
@@ -687,8 +696,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Bead Blast Finish)", "IP Rating": "IP66 (Conveyor Room) / IP65 (Outside)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, ±10%", "SCCR": "—",
     "Weight": "360 kg", "Memory Capacity": "100 items (expandable)",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 270 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-G2-4027", tag: "Top-Down (Dual Energy)", image: "img/IX-G2.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "Max. 100 kV",
@@ -699,8 +708,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Bead Blast Finish)", "IP Rating": "IP66 (Conveyor Room) / IP65 (Outside)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, ±10%", "SCCR": "—",
     "Weight": "400 kg", "Memory Capacity": "100 items (expandable)",
-    "Work Height": "900 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "800 × 430 mm"
+    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-PD-36A2", tag: "Top-Down (Photon Counting)", image: "img/IX-PD.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25-75 kV",
@@ -711,8 +720,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel", "IP Rating": "IP66",
     "Power Supply": "Single-phase AC 200-240V, 1400W (8.0A at AC200V)", "SCCR": "—",
     "Weight": "Approx. 340 kg", "Memory Capacity": "100 items",
-    "Work Height": "750 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "—"
+    "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "—", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-PD-45A2", tag: "Top-Down (Photon Counting)", image: "img/IX-PD.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25-75 kV",
@@ -723,8 +732,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel", "IP Rating": "IP66",
     "Power Supply": "Single-phase AC 200-240V, 1400W (8.0A at AC200V)", "SCCR": "—",
     "Weight": "Approx. 370 kg", "Memory Capacity": "100 items",
-    "Work Height": "750 mm ± 50", "Max. Product Height": "150 mm",
-    "Transport Length": "—"
+    "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "—", "Belt Width": "—", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GA-65100", tag: "Top-Down (Large High)", image: "img/IX-GA-65100.png", specs: {
     "Orientation": "Top-Down (Large High)", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "40/45/50/55/60/65/70/75/80/85/90/95/100 kV",
@@ -735,8 +744,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel", "IP Rating": "IP65 (Conveyor: IP66)",
     "Power Supply": "AC 200/208/220/230/240V, 50/60 Hz, ±10%", "SCCR": "—",
     "Weight": "—", "Memory Capacity": "—",
-    "Work Height": "750 mm ± 50", "Max. Product Height": "270 mm (Option: 420 mm)",
-    "Transport Length": "1200 × 700 mm"
+    "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "270 mm (Option: 420 mm)",
+    "Conveyor Length": "1200 mm", "Belt Width": "700 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GA-B3043", tag: "Side View (Bottle)", image: "img/IX-GA-B3043.png", specs: {
     "Orientation": "Side View (Bottle)", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "30-75 kV",
@@ -748,8 +757,8 @@ const modelsIshida = [
     "IP Rating": "IP65 / IP66 (Conveyor Unit)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz", "SCCR": "—",
     "Weight": "—", "Memory Capacity": "—",
-    "Work Height": "—", "Max. Product Height": "310 mm",
-    "Transport Length": "1550 × 1685 mm"
+    "Conveyor Height": "—", "Overall Height": "—", "Max. Product Height": "310 mm",
+    "Conveyor Length": "1550 × 1685 mm", "Belt Width": "—", "Detection Area": "—"
   }}
 ];/* ============================================================
    Model data — Anritsu (XR75 Series)
@@ -766,8 +775,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP40",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "245 kg", "Memory Capacity": "200",
-    "Work Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
-    "Transport Length": "270 mm (Belt Width) / 730 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
   { brand: "Anritsu", name: "XR75 Packaged 240 (AVCLE)", tag: "Top-Down", image: "img/XR75-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -775,12 +784,12 @@ const modelsAnritsu = [
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
     "Scanning Speed": "10-60 m/min (max 5 kg)", "Drive": "—", "Max. Transport Weight": "Max. 5 kg",
     "Display": "15\" Color TFT LCD", "Temperature Range": "0 to +35°C",
-    "Construction Frame": "Stainless Steel SUS304 (IP66 ทั้งเครื่อง)",
+    "Construction Frame": "Stainless Steel SUS304 (IP66 Entire Surface)",
     "IP Rating": "Entire Surface IP66",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "245 kg", "Memory Capacity": "200",
-    "Work Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
-    "Transport Length": "270 mm (Belt Width) / 730 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
   { brand: "Anritsu", name: "XR75 Packaged 390 (AWCLE)", tag: "Top-Down", image: "img/XR75-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -792,8 +801,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP40",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "305 kg", "Memory Capacity": "200",
-    "Work Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
-    "Transport Length": "420 mm (Belt Width) / 880 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
   { brand: "Anritsu", name: "XR75 Packaged 390 (AVCLE)", tag: "Top-Down", image: "img/XR75-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -801,12 +810,12 @@ const modelsAnritsu = [
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
     "Scanning Speed": "10-60 m/min (5 kg) / 10-40 m/min (10 kg opt)", "Drive": "—", "Max. Transport Weight": "Max. 5 kg (10 kg opt)",
     "Display": "15\" Color TFT LCD", "Temperature Range": "0 to +35°C",
-    "Construction Frame": "Stainless Steel SUS304 (IP66 ทั้งเครื่อง)",
+    "Construction Frame": "Stainless Steel SUS304 (IP66 Entire Surface)",
     "IP Rating": "Entire Surface IP66",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "310 kg", "Memory Capacity": "200",
-    "Work Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
-    "Transport Length": "420 mm (Belt Width) / 880 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
 
   /* ---------- XR75 Single Energy — Lightweight (4 รุ่น) ---------- */
@@ -820,9 +829,9 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP40",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "270 kg", "Memory Capacity": "200",
-    "Work Height": "1500-1630 mm / 10°-15° incline",
+    "Conveyor Height": "—", "Overall Height": "1500-1630 mm / 10°-15° incline",
     "Max. Product Height": "50 mm",
-    "Transport Length": "270 mm (Belt Width) / 730 mm (Detection Area)"
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
   { brand: "Anritsu", name: "XR75 Lightweight 240 (CVCLE)", tag: "Top-Down", image: "img/XR75-Lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "10-100 W", "HV Voltage (Infinitely variable)": "25-60 kV",
@@ -830,13 +839,13 @@ const modelsAnritsu = [
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
     "Scanning Speed": "10-50 m/min", "Drive": "—", "Max. Transport Weight": "Max. 5 kg",
     "Display": "15\" Color TFT LCD", "Temperature Range": "0 to +35°C",
-    "Construction Frame": "Stainless Steel SUS304 (IP66 ทั้งเครื่อง)",
+    "Construction Frame": "Stainless Steel SUS304 (IP66 Entire Surface)",
     "IP Rating": "Entire Surface IP66",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "275 kg", "Memory Capacity": "200",
-    "Work Height": "1500-1630 mm / 10°-15° incline",
+    "Conveyor Height": "—", "Overall Height": "1500-1630 mm / 10°-15° incline",
     "Max. Product Height": "50 mm",
-    "Transport Length": "270 mm (Belt Width) / 730 mm (Detection Area)"
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
   { brand: "Anritsu", name: "XR75 Lightweight 390 (CWCLE)", tag: "Top-Down", image: "img/XR75-Lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "10-100 W", "HV Voltage (Infinitely variable)": "25-60 kV",
@@ -848,9 +857,9 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP40",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "340 kg", "Memory Capacity": "200",
-    "Work Height": "1680-1810 mm / 10°-15° incline",
+    "Conveyor Height": "—", "Overall Height": "1680-1810 mm / 10°-15° incline",
     "Max. Product Height": "50 mm",
-    "Transport Length": "420 mm (Belt Width) / 880 mm (Detection Area)"
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
   { brand: "Anritsu", name: "XR75 Lightweight 390 (CVCLE)", tag: "Top-Down", image: "img/XR75-Lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "10-100 W", "HV Voltage (Infinitely variable)": "25-60 kV",
@@ -858,13 +867,13 @@ const modelsAnritsu = [
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
     "Scanning Speed": "10-50 m/min", "Drive": "—", "Max. Transport Weight": "Max. 5 kg",
     "Display": "15\" Color TFT LCD", "Temperature Range": "0 to +35°C",
-    "Construction Frame": "Stainless Steel SUS304 (IP66 ทั้งเครื่อง)",
+    "Construction Frame": "Stainless Steel SUS304 (IP66 Entire Surface)",
     "IP Rating": "Entire Surface IP66",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "345 kg", "Memory Capacity": "200",
-    "Work Height": "1680-1810 mm / 10°-15° incline",
+    "Conveyor Height": "—", "Overall Height": "1680-1810 mm / 10°-15° incline",
     "Max. Product Height": "50 mm",
-    "Transport Length": "420 mm (Belt Width) / 880 mm (Detection Area)"
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
 
   /* ---------- XR75 Single Energy — Large (2 รุ่น) ---------- */
@@ -878,8 +887,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP40",
     "Power Supply": "100-120 Vac or 200-240 Vac, Single-phase, 50/60 Hz, 1.2 kVA", "SCCR": "—",
     "Weight": "480 kg", "Memory Capacity": "200",
-    "Work Height": "700-800 mm (Line Height)", "Max. Product Height": "250 mm (Option: 350 mm)",
-    "Transport Length": "620 mm (Belt Width) / 590 mm (Detection Area)"
+    "Conveyor Height": "700-800 mm", "Overall Height": "—", "Max. Product Height": "250 mm (Option: 350 mm)",
+    "Conveyor Length": "—", "Belt Width": "620 mm", "Detection Area": "590 mm"
   }},
   { brand: "Anritsu", name: "XR75 Large/Case (WHSG)", tag: "Top-Down (Large)", image: "img/XR75-Large.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -891,8 +900,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP40",
     "Power Supply": "100-120 Vac or 200-240 Vac, Single-phase, 50/60 Hz, 1.2 kVA", "SCCR": "—",
     "Weight": "480 kg", "Memory Capacity": "200",
-    "Work Height": "700-800 mm (Line Height)", "Max. Product Height": "250 mm (Option: 350 mm)",
-    "Transport Length": "620 mm (Belt Width) / 590 mm (Detection Area)"
+    "Conveyor Height": "700-800 mm", "Overall Height": "—", "Max. Product Height": "250 mm (Option: 350 mm)",
+    "Conveyor Length": "—", "Belt Width": "620 mm", "Detection Area": "590 mm"
   }},
 
   /* ---------- XR75 DualX (4 รุ่น) ---------- */
@@ -906,8 +915,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP65",
     "Power Supply": "200-240 Vac, Single-phase, 47-63 Hz, 2100 VA or less", "SCCR": "—",
     "Weight": "300 kg", "Memory Capacity": "200",
-    "Work Height": "1477-1577 mm (Line Height)", "Max. Product Height": "120 mm",
-    "Transport Length": "270 mm (Belt Width) / 555 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1477-1577 mm (Line Height)", "Max. Product Height": "120 mm",
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "555 mm"
   }},
   { brand: "Anritsu", name: "XR75 DualX Packaged 390 (AWHZE)", tag: "Top-Down (Dual Energy)", image: "img/XR75-DualX-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "25-80 kV",
@@ -919,8 +928,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP65",
     "Power Supply": "200-240 Vac, Single-phase, 47-63 Hz, 2100 VA or less", "SCCR": "—",
     "Weight": "350 kg", "Memory Capacity": "200",
-    "Work Height": "1624-1724 mm (Line Height)", "Max. Product Height": "220 mm",
-    "Transport Length": "420 mm (Belt Width) / 630 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1624-1724 mm (Line Height)", "Max. Product Height": "220 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "630 mm"
   }},
   { brand: "Anritsu", name: "XR75 DualX Lightweight 240 (CWHZE)", tag: "Top-Down (Dual Energy)", image: "img/XR75-DualX-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "25-60 kV",
@@ -932,8 +941,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP65",
     "Power Supply": "200-240 Vac, Single-phase, 47-63 Hz, 2100 VA or less", "SCCR": "—",
     "Weight": "335 kg", "Memory Capacity": "200",
-    "Work Height": "1347-1355 mm / 10°-15° incline", "Max. Product Height": "50 mm",
-    "Transport Length": "270 mm (Belt Width) / 555 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1347-1355 mm / 10°-15° incline", "Max. Product Height": "50 mm",
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "555 mm"
   }},
   { brand: "Anritsu", name: "XR75 DualX Lightweight 390 (CWHZE)", tag: "Top-Down (Dual Energy)", image: "img/XR75-DualX-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "25-60 kV",
@@ -945,8 +954,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP66 / Other: IP65",
     "Power Supply": "200-240 Vac, Single-phase, 47-63 Hz, 2100 VA or less", "SCCR": "—",
     "Weight": "390 kg", "Memory Capacity": "200",
-    "Work Height": "1345-1355 mm / 10°-15° incline", "Max. Product Height": "50 mm",
-    "Transport Length": "420 mm (Belt Width) / 630 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1345-1355 mm / 10°-15° incline", "Max. Product Height": "50 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "630 mm"
   }},
 
   /* ---------- XR75 HR Dual Energy (2 รุ่น) ---------- */
@@ -960,8 +969,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP69K (80°C) / Other: IP69K (60°C)",
     "Power Supply": "200-240 Vac, Single-phase, 47-63 Hz, 2500 VA or less", "SCCR": "—",
     "Weight": "723 kg", "Memory Capacity": "200",
-    "Work Height": "800-900 mm (Line Height)", "Max. Product Height": "70 mm",
-    "Transport Length": "465 mm (Belt Width) / 370 mm (Detection Area)"
+    "Conveyor Height": "800-900 mm", "Overall Height": "—", "Max. Product Height": "70 mm",
+    "Conveyor Length": "—", "Belt Width": "465 mm", "Detection Area": "370 mm"
   }},
   { brand: "Anritsu", name: "XR75 DualX+ Packaged (ASGCD)", tag: "Top-Down (HR Dual Energy)", image: "img/XR75-DualXPlus-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "300 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -973,8 +982,8 @@ const modelsAnritsu = [
     "IP Rating": "IP66 (Air Conditioner: IP54)",
     "Power Supply": "200-240 Vac, Single-phase, 47-63 Hz, 1800 VA or less", "SCCR": "—",
     "Weight": "350 kg", "Memory Capacity": "200",
-    "Work Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
-    "Transport Length": "420 mm (Belt Width) / 629 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "629 mm"
   }},
 
   /* ---------- XR75 Special (4 รุ่น) ---------- */
@@ -988,8 +997,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP69K / Other: IP69 (max 40°C)",
     "Power Supply": "200-240 Vac, Single-phase, 50/60 Hz, 1500 VA or less", "SCCR": "—",
     "Weight": "410 kg", "Memory Capacity": "200",
-    "Work Height": "720-780 mm (Line Height)", "Max. Product Height": "200 mm",
-    "Transport Length": "430 mm (Belt Width) / 370 mm (Detection Area)"
+    "Conveyor Height": "720-780 mm", "Overall Height": "—", "Max. Product Height": "200 mm",
+    "Conveyor Length": "—", "Belt Width": "430 mm", "Detection Area": "370 mm"
   }},
   { brand: "Anritsu", name: "XR75 Multi-Lane (AWCLE + KWS6031)", tag: "Top-Down (Multi-Lane)", image: "img/XR75-MultiLane.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -1001,8 +1010,8 @@ const modelsAnritsu = [
     "IP Rating": "X-ray Conveyor: IP66 / Weigher: IP30",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA + 550 VA", "SCCR": "—",
     "Weight": "305 kg + 190 kg", "Memory Capacity": "200 (X-ray) / 50 (Weigher)",
-    "Work Height": "750 mm (Line Height)", "Max. Product Height": "220 mm",
-    "Transport Length": "420 mm (Belt Width) / 60 mm pitch (Multi-Lane)"
+    "Conveyor Height": "750 mm", "Overall Height": "—", "Max. Product Height": "220 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm (60 mm lane pitch, Multi-Lane)", "Detection Area": "—"
   }},
   { brand: "Anritsu", name: "XR75 Packing Check (DGEKE)", tag: "Top-Down (Seal Check)", image: "img/XR75-PackingCheck.png", specs: {
     "Orientation": "Top-Down", "Output Power": "—", "HV Voltage (Infinitely variable)": "—",
@@ -1014,8 +1023,8 @@ const modelsAnritsu = [
     "IP Rating": "IP40",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 1.0 kVA or less", "SCCR": "—",
     "Weight": "230 kg", "Memory Capacity": "200",
-    "Work Height": "750-850 mm (Line Height)", "Max. Product Height": "50 mm",
-    "Transport Length": "250 mm (Belt Width) / 205 mm (Detection Area)"
+    "Conveyor Height": "750-850 mm", "Overall Height": "—", "Max. Product Height": "50 mm",
+    "Conveyor Length": "—", "Belt Width": "250 mm", "Detection Area": "205 mm"
   }},
   { brand: "Anritsu", name: "XR75 SideView (BWELE)", tag: "Side View (Tall)", image: "img/XR75-SideView.png", specs: {
     "Orientation": "Side View (Tall Package)", "Output Power": "12-150 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -1027,8 +1036,8 @@ const modelsAnritsu = [
     "IP Rating": "Standard: Inspection IP66 / Other IP40 — Opt: IP65",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "400 kg", "Memory Capacity": "200",
-    "Work Height": "900-1000 mm (Line Height)", "Max. Product Height": "250 mm (Option: 290 mm)",
-    "Transport Length": "2000 mm (Overall Length) / 150 mm (Detection Area)"
+    "Conveyor Height": "900-1000 mm", "Overall Height": "—", "Max. Product Height": "250 mm (Option: 290 mm)",
+    "Conveyor Length": "2000 mm", "Belt Width": "—", "Detection Area": "150 mm"
   }},
 
   /* ---------- KD74 Pipeline (2 รุ่น) ---------- */
@@ -1042,8 +1051,8 @@ const modelsAnritsu = [
     "IP Rating": "IP66",
     "Power Supply": "—", "SCCR": "—",
     "Weight": "—", "Memory Capacity": "100",
-    "Work Height": "—", "Max. Product Height": "17 mm",
-    "Transport Length": "3\" diameter"
+    "Conveyor Height": "—", "Overall Height": "—", "Max. Product Height": "17 mm",
+    "Conveyor Length": "—", "Belt Width": "3\" diameter", "Detection Area": "—"
   }},
   { brand: "Anritsu", name: "KD74 Pipeline 4\"", tag: "Pipeline (4\")", image: "img/KD74-Pipeline.png", specs: {
     "Orientation": "Pipeline (4 inch)", "Output Power": "210 W", "HV Voltage (Infinitely variable)": "—",
@@ -1055,8 +1064,8 @@ const modelsAnritsu = [
     "IP Rating": "IP66",
     "Power Supply": "—", "SCCR": "—",
     "Weight": "—", "Memory Capacity": "100",
-    "Work Height": "—", "Max. Product Height": "17 mm",
-    "Transport Length": "4\" diameter"
+    "Conveyor Height": "—", "Overall Height": "—", "Max. Product Height": "17 mm",
+    "Conveyor Length": "—", "Belt Width": "4\" diameter", "Detection Area": "—"
   }},
 
   /* ---------- XR75 DualX Poultry GEN2 (1 รุ่น) ---------- */
@@ -1070,8 +1079,8 @@ const modelsAnritsu = [
     "IP Rating": "Conveyor: IP69K (80°C) / Other: IP69K (60°C)",
     "Power Supply": "200-240 Vac, Single-phase, 47-63 Hz, 2200 VA or less", "SCCR": "—",
     "Weight": "723 kg", "Memory Capacity": "200",
-    "Work Height": "800-900 mm (Line Height)", "Max. Product Height": "70 mm",
-    "Transport Length": "465 mm (Belt Width) / 370 mm (Detection Area)"
+    "Conveyor Height": "800-900 mm", "Overall Height": "—", "Max. Product Height": "70 mm",
+    "Conveyor Length": "—", "Belt Width": "465 mm", "Detection Area": "370 mm"
   }}
 ];
 
@@ -1088,8 +1097,8 @@ const modelsXR76 = [
     "Construction Frame": "Stainless Steel SUS304", "IP Rating": "IP66 (Entire Surface)",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "230 kg", "Memory Capacity": "200 or 999 (Switchable)",
-    "Work Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
-    "Transport Length": "270 mm (Belt Width) / 730 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
   { brand: "Anritsu", name: "XR76 Standard 390 (AVCTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
@@ -1100,8 +1109,8 @@ const modelsXR76 = [
     "Construction Frame": "Stainless Steel SUS304", "IP Rating": "IP66 (Entire Surface)",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "290 kg", "Memory Capacity": "200 or 999 (Switchable)",
-    "Work Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
-    "Transport Length": "420 mm (Belt Width) / 880 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
   { brand: "Anritsu", name: "XR76 Incline 240 (CVCTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 100 W", "HV Voltage (Infinitely variable)": "30-60 kV",
@@ -1112,8 +1121,8 @@ const modelsXR76 = [
     "Construction Frame": "Stainless Steel SUS304", "IP Rating": "IP66 (Entire Surface)",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "255 kg", "Memory Capacity": "200 or 999 (Switchable)",
-    "Work Height": "1330-1360 mm / 10°-15° incline", "Max. Product Height": "50 mm",
-    "Transport Length": "270 mm (Belt Width) / 730 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1330-1360 mm / 10°-15° incline", "Max. Product Height": "50 mm",
+    "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
   { brand: "Anritsu", name: "XR76 Incline 390 (CVCTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 100 W", "HV Voltage (Infinitely variable)": "30-60 kV",
@@ -1124,8 +1133,8 @@ const modelsXR76 = [
     "Construction Frame": "Stainless Steel SUS304", "IP Rating": "IP66 (Entire Surface)",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "330 kg", "Memory Capacity": "200 or 999 (Switchable)",
-    "Work Height": "1515-1530 mm / 10°-15° incline", "Max. Product Height": "50 mm",
-    "Transport Length": "420 mm (Belt Width) / 880 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1515-1530 mm / 10°-15° incline", "Max. Product Height": "50 mm",
+    "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
   { brand: "Anritsu", name: "XR76 Divided (DGBTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 25 W", "HV Voltage (Infinitely variable)": "50 kV",
@@ -1136,8 +1145,8 @@ const modelsXR76 = [
     "Construction Frame": "Stainless Steel SUS304", "IP Rating": "Conveyor: IP40 / Other: IP66",
     "Power Supply": "100-240 Vac, Single-phase, 50/60 Hz, 700 VA or less", "SCCR": "—",
     "Weight": "235 kg", "Memory Capacity": "200 or 999 (Switchable)",
-    "Work Height": "1455-1555 mm (Line Height)", "Max. Product Height": "50 mm",
-    "Transport Length": "250 mm (Belt Width) / 210 mm (Detection Area)"
+    "Conveyor Height": "—", "Overall Height": "1455-1555 mm (Line Height)", "Max. Product Height": "50 mm",
+    "Conveyor Length": "—", "Belt Width": "250 mm", "Detection Area": "210 mm"
   }}
 ];
 

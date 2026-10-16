@@ -591,7 +591,7 @@ const modelsIshida = [
   { brand: "Ishida", name: "IX-EN-24A1", tag: "Top-Down", image: "img/ishida/ix-en-24a1.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-75 kV (Glass Type)",
     "HV Current (Infinitely variable)": "1-5 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
-    "Sensor Technology": "GA Auto Choice (300 programs)", "Resolution": "—",
+    "Sensor Technology": "Diode", "Resolution": "—",
     "Scanning Speed": "10-60 m/min", "Drive": "—", "Max. Transport Weight": "5 kg",
     "Display": "15\" Touch Panel", "Temperature Range": "0 to +33°C",
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Inspection Chamber)",
@@ -642,7 +642,7 @@ const modelsIshida = [
   { brand: "Ishida", name: "IX-GN-2443", tag: "Top-Down", image: "img/ishida/ix-gn-2443.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
     "HV Current (Infinitely variable)": "1-5 mA", "Cooling System": "Integrated Air Conditioning",
-    "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "0.4 mm",
+    "Sensor Technology": "Diode", "Resolution": "0.4 mm",
     "Scanning Speed": "10-60 m/min (90 m/min optional)", "Drive": "—", "Max. Transport Weight": "5 kg",
     "Display": "17\" Touch Screen", "Temperature Range": "0 to +35°C",
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP65 (Enclosure)",
@@ -654,7 +654,7 @@ const modelsIshida = [
   { brand: "Ishida", name: "IX-GN-2444", tag: "Top-Down", image: "img/ishida/ix-gn-2443.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
     "HV Current (Infinitely variable)": "1-8 mA", "Cooling System": "Integrated Air Conditioning",
-    "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "0.3 mm",
+    "Sensor Technology": "Diode", "Resolution": "0.3 mm",
     "Scanning Speed": "10-60 m/min (90 m/min optional)", "Drive": "—", "Max. Transport Weight": "5 kg",
     "Display": "17\" Touch Screen", "Temperature Range": "0 to +35°C",
     "Construction Frame": "Stainless Steel SUS304 (Polished)", "IP Rating": "IP66 (Conveyor Chamber) / IP65 (Enclosure)",
@@ -710,7 +710,7 @@ const modelsIshida = [
     "Weight": "500 kg", "Memory Capacity": "200 items",
     "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "270 mm",
     "Conveyor Length": "1200 mm", "Belt Width": "550 mm", "Detection Area": "—",
-    "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 15,000 running hour / 3 years (whichever come earlier)"
+    "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 10,000 running hour / 2 years (whichever come earlier)"
   }},
   { brand: "Ishida", name: "IX-G2-2427", tag: "Top-Down (Dual Energy)", image: "img/ishida/ix-g2.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "Max. 100 kV",
@@ -721,7 +721,7 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Bead Blast Finish)", "IP Rating": "IP66 (Conveyor Room) / IP65 (Outside)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, ±10%", "SCCR": "—",
     "Weight": "360 kg", "Memory Capacity": "100 items (expandable)",
-    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-G2-4027", tag: "Top-Down (Dual Energy)", image: "img/ishida/ix-g2.png", specs: {
@@ -733,7 +733,7 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel SUS304 (Bead Blast Finish)", "IP Rating": "IP66 (Conveyor Room) / IP65 (Outside)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz, ±10%", "SCCR": "—",
     "Weight": "400 kg", "Memory Capacity": "100 items (expandable)",
-    "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-PD-36A2", tag: "Top-Down (Photon Counting)", image: "img/ishida/ix-pd.png", specs: {
@@ -745,8 +745,8 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel", "IP Rating": "IP66",
     "Power Supply": "Single-phase AC 200-240V, 1400W (8.0A at AC200V)", "SCCR": "—",
     "Weight": "Approx. 340 kg", "Memory Capacity": "100 items",
-    "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
-    "Conveyor Length": "—", "Belt Width": "—", "Detection Area": "—"
+    "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "360 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-PD-45A2", tag: "Top-Down (Photon Counting)", image: "img/ishida/ix-pd.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25-75 kV",
@@ -757,32 +757,32 @@ const modelsIshida = [
     "Construction Frame": "Stainless Steel", "IP Rating": "IP66",
     "Power Supply": "Single-phase AC 200-240V, 1400W (8.0A at AC200V)", "SCCR": "—",
     "Weight": "Approx. 370 kg", "Memory Capacity": "100 items",
-    "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
-    "Conveyor Length": "—", "Belt Width": "—", "Detection Area": "—"
+    "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
+    "Conveyor Length": "800 mm", "Belt Width": "450 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GA-65100", tag: "Top-Down (Large High)", image: "img/ishida/ix-ga-65100.png", specs: {
     "Orientation": "Top-Down (Large High)", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "40/45/50/55/60/65/70/75/80/85/90/95/100 kV",
-    "HV Current (Infinitely variable)": "1-5.0 mA", "Cooling System": "Hermetic Air Cooling",
-    "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "—",
+    "HV Current (Infinitely variable)": "1-5.0 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
+    "Sensor Technology": "Diode", "Resolution": "—",
     "Scanning Speed": "5-30 m/min", "Drive": "—", "Max. Transport Weight": "Max. 50 kg",
     "Display": "Color Touchscreen", "Temperature Range": "0 to +40°C",
     "Construction Frame": "Stainless Steel", "IP Rating": "IP65 (Conveyor: IP66)",
     "Power Supply": "AC 200/208/220/230/240V, 50/60 Hz, ±10%", "SCCR": "—",
-    "Weight": "—", "Memory Capacity": "—",
-    "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "270 mm (Option: 420 mm)",
+    "Weight": "Approx. 500kg", "Memory Capacity": "200 items",
+    "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "270 mm (Option: 420 mm)",
     "Conveyor Length": "1200 mm", "Belt Width": "700 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GA-B3043", tag: "Side View (Bottle)", image: "img/ishida/ix-ga-b3043.png", specs: {
     "Orientation": "Side View (Bottle)", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "30-75 kV",
-    "HV Current (Infinitely variable)": "1-8.0 mA", "Cooling System": "Hermetic Air Cooling",
-    "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "—",
+    "HV Current (Infinitely variable)": "1-8.0 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
+    "Sensor Technology": "Diode", "Resolution": "—",
     "Scanning Speed": "12-45 m/min (10kg) / 4-40 m/min (5kg)", "Drive": "Turn Table (Circular)",
     "Max. Transport Weight": "—", "Display": "Color Touchscreen",
     "Temperature Range": "0 to +40°C", "Construction Frame": "Stainless Steel",
     "IP Rating": "IP65 / IP66 (Conveyor Unit)",
     "Power Supply": "Single-phase AC 200-240V, 50/60 Hz", "SCCR": "—",
-    "Weight": "—", "Memory Capacity": "—",
-    "Conveyor Height": "—", "Overall Height": "—", "Max. Product Height": "310 mm",
+    "Weight": "—", "Memory Capacity": "200 items",
+    "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "310 mm",
     "Conveyor Length": "1550 × 1685 mm", "Belt Width": "—", "Detection Area": "—"
   }}
 ];/* ============================================================

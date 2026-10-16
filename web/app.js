@@ -335,7 +335,14 @@ btnCompareClear.addEventListener('click', () => {
   }
 });
 
-function showCompare() {
+/* Hidden spec rows (sales can hide data they don't want customers to see) */
+let hiddenRows = new Set();
+try { hiddenRows = new Set(JSON.parse(localStorage.getItem('hiddenRows') || '[]')); } catch (e) {}
+function saveHiddenRows() {
+  try { localStorage.setItem('hiddenRows', JSON.stringify([...hiddenRows])); } catch (e) {}
+}
+
+function showCompare(keepScroll) {
   if (compareSelection.length < 2) return;
 
   const itemCount = compareSelection.length;
@@ -359,6 +366,7 @@ function showCompare() {
 
   let rows = '';
   allKeys.forEach(labelKey => {
+    if (hiddenRows.has(labelKey)) return;
     const { values, allSame } = buildRowValues(items, labelKey);
 
     const cells = values.map(v =>
@@ -367,7 +375,7 @@ function showCompare() {
 
     rows += `
       <tr>
-        <th>${tLabel(labelKey)}</th>
+        <th><span class="row-label">${tLabel(labelKey)}</span><button type="button" class="row-hide" data-key="${labelKey.replace(/"/g, '&quot;')}" title="${t('hideRow')}" aria-label="${t('hideRow')}">&#128065;&#8202;&#10005;</button></th>
         ${cells}
       </tr>`;
   });
@@ -412,6 +420,10 @@ function showCompare() {
       <div class="compare-images ${compareClass}">
         ${imageCells}
       </div>
+      <div class="hidden-bar" id="hiddenBar" style="display:${hiddenRows.size ? 'flex' : 'none'}">
+        <span>&#128065; ${t('hiddenRows')}: ${hiddenRows.size} &mdash; ${t('hiddenNote')}</span>
+        <button type="button" id="btnShowAllRows">${t('showAllRows')}</button>
+      </div>
       <table class="compare-table ${compareClass}">
         <thead>
           <tr>
@@ -446,7 +458,20 @@ function showCompare() {
     exportComparePDF(items, itemCount);
   });
 
-  compareView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  compareView.querySelectorAll('.row-hide').forEach(b => {
+    b.addEventListener('click', () => {
+      hiddenRows.add(b.dataset.key);
+      saveHiddenRows();
+      showCompare(true);
+    });
+  });
+  document.getElementById('btnShowAllRows').addEventListener('click', () => {
+    hiddenRows.clear();
+    saveHiddenRows();
+    showCompare(true);
+  });
+
+  if (!keepScroll) compareView.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /* ============================================================
@@ -468,6 +493,7 @@ function exportComparePDF(items, itemCount) {
     });
 
     allKeys.forEach(labelKey => {
+      if (hiddenRows.has(labelKey)) return;
       const { values, allSame } = buildRowValues(items, labelKey);
 
       const cells = values.map(v =>

@@ -17,6 +17,10 @@ const translations = {
     compareClose: "Close",
     compareAlert: "You can compare up to 4 models at a time. Please clear one first.",
     exportPdf: "Export PDF",
+    hideRow: "Hide this row",
+    showAllRows: "Show all",
+    hiddenRows: "Hidden rows",
+    hiddenNote: "Hidden rows are not shown here or in the PDF.",
     labels: {
       "Orientation": "Orientation",
       "Output Power": "Output Power",
@@ -83,6 +87,10 @@ const translations = {
     compareClose: "ปิด",
     compareAlert: "เปรียบเทียบได้ครั้งละไม่เกิน 4 รุ่น กรุณาล้างอันเก่าก่อน",
     exportPdf: "ดาวน์โหลด PDF",
+    hideRow: "ซ่อนแถวนี้",
+    showAllRows: "แสดงทั้งหมด",
+    hiddenRows: "แถวที่ซ่อน",
+    hiddenNote: "แถวที่ซ่อนจะไม่แสดงทั้งในหน้านี้และใน PDF",
     labels: {
       "Orientation": "การติดตั้ง",
       "Output Power": "กำลังไฟออก",
@@ -149,6 +157,10 @@ const translations = {
     compareClose: "关闭",
     compareAlert: "一次最多对比 4 个型号，请先清除一个。",
     exportPdf: "导出 PDF",
+    hideRow: "隐藏此行",
+    showAllRows: "全部显示",
+    hiddenRows: "已隐藏行",
+    hiddenNote: "隐藏的行不会显示在此页面和 PDF 中",
     labels: {
       "Orientation": "安装方向",
       "Output Power": "输出功率",

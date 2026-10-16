@@ -42,7 +42,8 @@ header {
   height: 46px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.08));
+  /* blend away the logo's white/off-white box so it sits cleanly on the header */
+  mix-blend-mode: multiply;
 }
 .subtitle {
   font-size: 13px;
@@ -946,3 +947,13 @@ footer strong { color: var(--teal-dark); }
   padding: 4px 12px; border-radius: 4px; cursor: pointer; white-space: nowrap;
 }
 @media print { .row-hide, .hidden-bar { display: none !important; } }
+
+/* Brand logos: blend any off-white image background into the white surface */
+.detail-brand-banner img, .th-brand-logo img { mix-blend-mode: multiply; }
+
+/* Hide rows in the single-model detail view */
+.spec-row { position: relative; }
+.spec-row .row-hide { right: 12px; }
+.spec-row:hover .row-hide { opacity: 1; }
+.detail .hidden-bar { margin: 12px 24px; }
+@media print { .spec-row .row-hide { display: none !important; } }

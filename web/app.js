@@ -214,6 +214,26 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 /* ============================================================
    Detail view
    ============================================================ */
+/* Hidden spec rows (sales can hide data they don't want customers to see) */
+let hiddenRows = new Set();
+try { hiddenRows = new Set(JSON.parse(localStorage.getItem('hiddenRows') || '[]')); } catch (e) {}
+function saveHiddenRows() {
+  try { localStorage.setItem('hiddenRows', JSON.stringify([...hiddenRows])); } catch (e) {}
+}
+
+function hideButtonHTML(labelKey) {
+  const k = labelKey.replace(/"/g, '&quot;');
+  return `<button type="button" class="row-hide" data-key="${k}" title="${t('hideRow')}" aria-label="${t('hideRow')}">&#128065;&#8202;&#10005;</button>`;
+}
+
+function hiddenBarHTML() {
+  return `
+    <div class="hidden-bar" style="display:${hiddenRows.size ? 'flex' : 'none'}">
+      <span>&#128065; ${t('hiddenRows')}: ${hiddenRows.size} &mdash; ${t('hiddenNote')}</span>
+      <button type="button" class="btn-show-all-rows">${t('showAllRows')}</button>
+    </div>`;
+}
+
 function showDetail(index, cardEl) {
   currentModelIndex = index;
   compareView.style.display = 'none';
@@ -246,6 +266,7 @@ function showDetail(index, cardEl) {
 
   let rows = '';
   for (const [labelKey, value] of Object.entries(model.specs)) {
+    if (hiddenRows.has(labelKey)) continue;
     const translatedLabel = tLabel(labelKey);
     const finalValue = translateHTML(value);
 
@@ -253,6 +274,7 @@ function showDetail(index, cardEl) {
       <div class="spec-row">
         <div class="spec-label">${translatedLabel}</div>
         <div class="spec-value">${finalValue}</div>
+        ${hideButtonHTML(labelKey)}
       </div>`;
   }
 
@@ -264,8 +286,23 @@ function showDetail(index, cardEl) {
       </div>
       ${brandBannerHTML}
       ${imageBlock}
+      ${hiddenBarHTML()}
       ${rows}
     </div>`;
+
+  detailContainer.querySelectorAll('.row-hide').forEach(b => {
+    b.addEventListener('click', () => {
+      hiddenRows.add(b.dataset.key);
+      saveHiddenRows();
+      showDetail(index, cardEl);
+    });
+  });
+  const showAll = detailContainer.querySelector('.btn-show-all-rows');
+  if (showAll) showAll.addEventListener('click', () => {
+    hiddenRows.clear();
+    saveHiddenRows();
+    showDetail(index, cardEl);
+  });
 }
 
 /* ============================================================
@@ -334,13 +371,6 @@ btnCompareClear.addEventListener('click', () => {
       </div>`;
   }
 });
-
-/* Hidden spec rows (sales can hide data they don't want customers to see) */
-let hiddenRows = new Set();
-try { hiddenRows = new Set(JSON.parse(localStorage.getItem('hiddenRows') || '[]')); } catch (e) {}
-function saveHiddenRows() {
-  try { localStorage.setItem('hiddenRows', JSON.stringify([...hiddenRows])); } catch (e) {}
-}
 
 function showCompare(keepScroll) {
   if (compareSelection.length < 2) return;

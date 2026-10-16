@@ -217,7 +217,7 @@ const translations = {
    Model data — WIPOTEC
    ============================================================ */
 const modelsWipotec = [
-  { brand: "Wipotec", name: "SC-E 3000/4000", tag: "Top-Down", image: "img/SC-E-3000-4000.png", specs: {
+  { brand: "Wipotec", name: "SC-E 3000/4000", tag: "Top-Down", image: "img/wipotec/sc-e-3000-4000.png", specs: {
     "Orientation": "Top-Down", "Output Power": "200 W", "HV Voltage (Infinitely variable)": "80 kV",
     "HV Current (Infinitely variable)": "3 mA", "Cooling System": "Cabinet Fan; Additional AC unit <span class='opt'>(Opt)</span>",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm; 0.8 mm <span class='opt'>(Opt)</span>",
@@ -231,7 +231,7 @@ const modelsWipotec = [
     "Conveyor Length": "800 / 1500 / 1800 mm", "Belt Width": "300 / 400 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Standard 1 year machine warranty"
   }},
-  { brand: "Wipotec", name: "SC 30/40", tag: "Top-Down", image: "img/SC-30-40.png", specs: {
+  { brand: "Wipotec", name: "SC 30/40", tag: "Top-Down", image: "img/wipotec/sc-30-40.png", specs: {
     "Orientation": "Top-Down", "Output Power": "200 W / 600 W",
     "HV Voltage (Infinitely variable)": "Diode 80 kV; VioX & DFX-Ray 75 kV",
     "HV Current (Infinitely variable)": "Diode 3 mA; VioX & DFX-Ray 10 mA",
@@ -246,7 +246,7 @@ const modelsWipotec = [
     "Max. Product Height": "With curtain 180 mm; W/o curtain 230 mm", "Conveyor Length": "Customized", "Belt Width": "300 / 400 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Standard 1 year machine warranty"
   }},
-  { brand: "Wipotec", name: "SC-B 30", tag: "Top-Down", image: "img/SC-B-30.png", specs: {
+  { brand: "Wipotec", name: "SC-B 30", tag: "Top-Down", image: "img/wipotec/sc-b-30.png", specs: {
     "Orientation": "Top-Down", "Output Power": "200 W", "HV Voltage (Infinitely variable)": "80 kV",
     "HV Current (Infinitely variable)": "3 mA", "Cooling System": "Cabinet Fan; Additional AC unit <span class='opt'>(Opt)</span>",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm; 0.8 mm <span class='opt'>(Opt)</span>",
@@ -261,7 +261,7 @@ const modelsWipotec = [
     "Conveyor Length": "1490 / 1790 mm", "Belt Width": "300 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Standard 1 year machine warranty"
   }},
-  { brand: "Wipotec", name: "SC 2000", tag: "Top-Down", image: "img/SC-2000.png", specs: {
+  { brand: "Wipotec", name: "SC 2000", tag: "Top-Down", image: "img/wipotec/sc-2000.png", specs: {
     "Orientation": "Top-Down", "Output Power": "150 W", "HV Voltage (Infinitely variable)": "50 kV",
     "HV Current (Infinitely variable)": "3 mA", "Cooling System": "Cabinet Fan; Additional AC unit <span class='opt'>(Opt)</span>",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm", "Scanning Speed": "Max. 120 m/min",
@@ -273,7 +273,7 @@ const modelsWipotec = [
     "Max. Product Height": "110 mm", "Conveyor Length": "500-2100 mm (by 100 mm incremental; 500 / 600 mm without reject)", "Belt Width": "200 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Standard 1 year machine warranty"
   }},
-  { brand: "Wipotec", name: "SC 5000/6000", tag: "Top-Down", image: "img/SC-30-40.png", specs: {
+  { brand: "Wipotec", name: "SC 5000/6000", tag: "Top-Down", image: "img/wipotec/sc-30-40.png", specs: {
     "Orientation": "Top-Down", "Output Power": "600 W", "HV Voltage (Infinitely variable)": "60 kV or 75 kV",
     "HV Current (Infinitely variable)": "8 mA or 10 mA", "Cooling System": "Internal Closed Loop cooling",
     "Sensor Technology": "VioX - TDi", "Resolution": "VioX 0.1 mm", "Scanning Speed": "49 m/min (Depending on options)",
@@ -284,7 +284,7 @@ const modelsWipotec = [
     "Max. Product Height": "—", "Conveyor Length": "Customized", "Belt Width": "610 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Standard 1 year machine warranty"
   }},
-  { brand: "Wipotec", name: "SC-S 4000", tag: "Side View", image: "img/SC-S-4000.png", specs: {
+  { brand: "Wipotec", name: "SC-S 4000", tag: "Side View", image: "img/wipotec/sc-s-4000.png", specs: {
     "Orientation": "Side View", "Output Power": "600 W", "HV Voltage (Infinitely variable)": "75 kV",
     "HV Current (Infinitely variable)": "8 mA; 10 mA (60 kV Machine)", "Cooling System": "Air-Water Cooling Unit",
     "Sensor Technology": "Diode; VioX - TDi <span class='opt'>(Opt)</span>",
@@ -297,7 +297,7 @@ const modelsWipotec = [
     "Max. Product Height": "With curtain 246 mm; W/o curtain 303 mm", "Conveyor Length": "2,400 mm", "Belt Width": "200 mm (w/ Curtain); 110 mm (w/o Curtain)", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Standard 1 year machine warranty"
   }},
-  { brand: "Wipotec", name: "SC-S 5020", tag: "Side View", image: "img/SC-S-5020.png", specs: {
+  { brand: "Wipotec", name: "SC-S 5020", tag: "Side View", image: "img/wipotec/sc-s-5020.png", specs: {
     "Orientation": "Side View", "Output Power": "2 x 500 W", "HV Voltage (Infinitely variable)": "Max. 120 kV",
     "HV Current (Infinitely variable)": "Max. 7 mA", "Cooling System": "2 x Air-Water Cooling Unit",
     "Sensor Technology": "2 x Diode", "Resolution": "0.4 mm", "Scanning Speed": "Max. 120 m/min",
@@ -316,7 +316,7 @@ const modelsWipotec = [
 const mtWarranty = "• Standard Machine Warranty: 12 Months<br>• Generator Warranty: 5 Years*<br>*Condition: Valid ONLY with purchase of Standard or Comprehensive Care service package (requires annual certified PM). Without active service contract, reverts to standard 12 months.";
 
 const modelsMettlerToledo = [
-  { brand: "Mettler-Toledo", name: "X12", tag: "Top-Down", image: "img/X12.png", specs: {
+  { brand: "Mettler-Toledo", name: "X12", tag: "Top-Down", image: "img/mettler-toledo/x12.png", specs: {
     "Orientation": "Top-Down", "Output Power": "150 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA", "Cooling System": "Internal Heat Exchanger (Air Cooled)",
     "Sensor Technology": "Diode (HiGain)", "Resolution": "0.4 mm; 0.8 mm <span class='opt'>(Opt)</span>",
@@ -329,7 +329,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "800 / 1200 / 1800 mm", "Belt Width": "300 / 400 mm", "Detection Area": "—", "Launch Year": "2023 (Interpack / Sep 2023)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X13", tag: "Top-Down (Bulk Flow)", image: "img/X13.png", specs: {
+  { brand: "Mettler-Toledo", name: "X13", tag: "Top-Down (Bulk Flow)", image: "img/mettler-toledo/x13.png", specs: {
     "Orientation": "Top-Down (Bulk Flow)", "Output Power": "150 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA", "Cooling System": "Internal Heat Exchanger (Air Cooled)",
     "Sensor Technology": "Diode (HiGain+)", "Resolution": "0.4 mm; 0.8 mm <span class='opt'>(Opt)</span>",
@@ -342,7 +342,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "Approx. 1500 - 1800 mm", "Belt Width": "300 / 400 mm", "Detection Area": "—", "Launch Year": "2025 (Nov 2025 - X3 Series)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X16", tag: "Top-Down", image: "img/X16.png", specs: {
+  { brand: "Mettler-Toledo", name: "X16", tag: "Top-Down", image: "img/mettler-toledo/x16.png", specs: {
     "Orientation": "Top-Down", "Output Power": "150 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA (100W) / 5.0 mA (420W)",
     "Cooling System": "Air Cooled (100W); AC Unit & Radiator Pump (420W)",
@@ -356,7 +356,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "1500 - 2200 mm", "Belt Width": "600 mm", "Detection Area": "—", "Launch Year": "2024 (Pack Expo Nov 2024)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X34", tag: "Top-Down", image: "img/X34.png", specs: {
+  { brand: "Mettler-Toledo", name: "X34", tag: "Top-Down", image: "img/mettler-toledo/x34.png", specs: {
     "Orientation": "Top-Down", "Output Power": "100 W (Optimum Power)", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 1.2 mA / 3.3 mA", "Cooling System": "Internal Heat Exchanger (Air Cooled)",
     "Sensor Technology": "Diode (HiGain+)", "Resolution": "0.4 mm; 0.8 mm <span class='opt'>(Opt)</span>",
@@ -368,7 +368,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "800 / 1200 / 1800 mm", "Belt Width": "300 / 400 mm", "Detection Area": "—", "Launch Year": "2018 (Late 2018)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X34C", tag: "Top-Down", image: "img/X34C.png", specs: {
+  { brand: "Mettler-Toledo", name: "X34C", tag: "Top-Down", image: "img/mettler-toledo/x34c.png", specs: {
     "Orientation": "Top-Down", "Output Power": "100 W (Optimum Power)", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 1.2 mA / 3.3 mA", "Cooling System": "Internal Heat Exchanger (Air Cooled)",
     "Sensor Technology": "Diode (HiGain+)", "Resolution": "0.4 mm",
@@ -379,7 +379,7 @@ const modelsMettlerToledo = [
     "Conveyor Height": "750 - 1050 mm", "Overall Height": "—", "Max. Product Height": "Up to 80 - 100 mm", "Conveyor Length": "700 mm", "Belt Width": "~200 mm (Max product width 170 mm)", "Detection Area": "—",
     "Launch Year": "2022 (Feb 2022)", "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X36", tag: "Top-Down", image: "img/X36.png", specs: {
+  { brand: "Mettler-Toledo", name: "X36", tag: "Top-Down", image: "img/mettler-toledo/x36.png", specs: {
     "Orientation": "Top-Down", "Output Power": "100 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA (100W) / 3.0 mA (300W) / 5.0 mA (420W)",
     "Cooling System": "Air Cooled (100W); AC Unit & Radiator Pump (420W)",
@@ -394,7 +394,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "1200 - 2400 mm / Customized", "Belt Width": "300/ 400/ 500/ 600/ 800 mm", "Detection Area": "—", "Launch Year": "2014 (Interpack 2014)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X36.2", tag: "Top-Down", image: "img/X36.2.png", specs: {
+  { brand: "Mettler-Toledo", name: "X36.2", tag: "Top-Down", image: "img/mettler-toledo/x36.2.png", specs: {
     "Orientation": "Top-Down", "Output Power": "100 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA (100W) / 5.0 mA (420W)",
     "Cooling System": "Air Cooled (100W); AC Unit & Radiator Pump (420W)",
@@ -408,7 +408,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "1200 - 2400 mm / Customized", "Belt Width": "300/ 400/ 600 mm", "Detection Area": "—", "Launch Year": "2024 (Nov 2024)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X36 Bulk", tag: "Top-Down (Bulk Flow)", image: "img/X36.png", specs: {
+  { brand: "Mettler-Toledo", name: "X36 Bulk", tag: "Top-Down (Bulk Flow)", image: "img/mettler-toledo/x36.png", specs: {
     "Orientation": "Top-Down (Bulk Flow)", "Output Power": "100 W / 420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA (100W) / 5.0 mA (420W)",
     "Cooling System": "Air Cooled (100W); AC Unit & Radiator Pump (420W)",
@@ -422,7 +422,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "Approx. 1600 - 2000 mm", "Belt Width": "300/ 400/ 600 mm", "Detection Area": "—", "Launch Year": "2015",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X52", tag: "Top-Down", image: "img/X52.png", specs: {
+  { brand: "Mettler-Toledo", name: "X52", tag: "Top-Down", image: "img/mettler-toledo/x52.png", specs: {
     "Orientation": "Top-Down", "Output Power": "100 W (Optimum Power)", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA (Beryllium Tube)", "Cooling System": "Air Cooled (Internal heat exchanger)",
     "Sensor Technology": "Dual Energy (HiGain+ DE w/ AMD)", "Resolution": "Dual Energy 0.4 mm / 0.8 mm",
@@ -435,7 +435,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "800 / 1300 / 1800 / 2000 mm", "Belt Width": "300 / 400 mm", "Detection Area": "—", "Launch Year": "2024 (Oct 2024)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X53", tag: "Top-Down (Bulk Flow)", image: "img/X53.png", specs: {
+  { brand: "Mettler-Toledo", name: "X53", tag: "Top-Down (Bulk Flow)", image: "img/mettler-toledo/x53.png", specs: {
     "Orientation": "Top-Down (Bulk Flow)", "Output Power": "100 W (Beryllium Tube)", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 3.3 mA", "Cooling System": "Air Cooled (Internal heat exchanger)",
     "Sensor Technology": "Dual Energy (HiGain+ DE Technology)", "Resolution": "Dual Energy 0.4 mm / 0.8 mm",
@@ -448,7 +448,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "Approx. 1500 - 1800 mm", "Belt Width": "300 / 400 mm", "Detection Area": "—", "Launch Year": "2025 (Nov 2025 - X3 Series DE)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X56", tag: "Top-Down", image: "img/X56.png", specs: {
+  { brand: "Mettler-Toledo", name: "X56", tag: "Top-Down", image: "img/mettler-toledo/x56.png", specs: {
     "Orientation": "Top-Down", "Output Power": "420 W", "HV Voltage (Infinitely variable)": "Up to 84 kV",
     "HV Current (Infinitely variable)": "Up to 5.0 mA (Beryllium Tube)", "Cooling System": "Air Conditioner & Radiator Pump (Closed loop)",
     "Sensor Technology": "Dual Energy Photon-Counting (DXD+ w/ AI & AMD Pro)", "Resolution": "Dual Energy 0.4 mm / 0.8 mm",
@@ -461,7 +461,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "1500 - 2400 mm / Customized", "Belt Width": "TBC", "Detection Area": "—", "Launch Year": "2026 (Jun 2026)",
     "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X3710", tag: "Side View (Single Horizontal Beam)", image: "img/X3710.png", specs: {
+  { brand: "Mettler-Toledo", name: "X3710", tag: "Side View (Single Horizontal Beam)", image: "img/mettler-toledo/x3710.png", specs: {
     "Orientation": "Side View (Single Horizontal Beam)", "Output Power": "20 W (Low-Power Generator)",
     "HV Voltage (Infinitely variable)": "Up to 84 kV", "HV Current (Infinitely variable)": "Up to 0.25 mA (Glass Tube)",
     "Cooling System": "Passive fan assisted internal cooling", "Sensor Technology": "Diode (HiGain Technology)",
@@ -475,7 +475,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "Straddles customer conveyor (~1200 - 1500 mm tunnel)", "Belt Width": "Customer conveyor (Max product width 150 mm)", "Detection Area": "—",
     "Launch Year": "2015 (Jan 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X3720", tag: "Side View (Single Horizontal Beam)", image: "img/X3720.png", specs: {
+  { brand: "Mettler-Toledo", name: "X3720", tag: "Side View (Single Horizontal Beam)", image: "img/mettler-toledo/x3720.png", specs: {
     "Orientation": "Side View (Single Horizontal Beam)", "Output Power": "100 W",
     "HV Voltage (Infinitely variable)": "Up to 84 kV", "HV Current (Infinitely variable)": "Up to 1.2 mA (100W)",
     "Cooling System": "AC Unit", "Sensor Technology": "Diode (Single Beam 400mm detector)",
@@ -489,7 +489,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "Approx. 1200 - 1800 mm (Line straddling)", "Belt Width": "Customer conveyor (Max product width 170 mm)", "Detection Area": "—",
     "Launch Year": "2015 (Jan 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X3725", tag: "Side View (Single Horizontal Beam)", image: "img/X3725.png", specs: {
+  { brand: "Mettler-Toledo", name: "X3725", tag: "Side View (Single Horizontal Beam)", image: "img/mettler-toledo/x3725.png", specs: {
     "Orientation": "Side View (Single Horizontal Beam)", "Output Power": "100 W",
     "HV Voltage (Infinitely variable)": "Up to 84 kV", "HV Current (Infinitely variable)": "Up to 1.2 mA (100W)",
     "Cooling System": "AC Unit", "Sensor Technology": "Diode (Single Beam 400mm detector)",
@@ -503,7 +503,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "4,500 - 5,200 mm (Full-length integrated conveyor)", "Belt Width": "Integrated conveyor (Max product width 180 mm)", "Detection Area": "—",
     "Launch Year": "2015 (Mid 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X3730", tag: "Side View (Split-Beam)", image: "img/X3730.png", specs: {
+  { brand: "Mettler-Toledo", name: "X3730", tag: "Side View (Split-Beam)", image: "img/mettler-toledo/x3730.png", specs: {
     "Orientation": "Side View (Split-Beam)", "Output Power": "420 W",
     "HV Voltage (Infinitely variable)": "Up to 84 kV", "HV Current (Infinitely variable)": "Up to 5.0 mA (420W)",
     "Cooling System": "AC Unit & Radiator Pump (420W)", "Sensor Technology": "Diode (Split-Beam Dual Detector)",
@@ -517,7 +517,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "Approx. 1800 - 2400 mm (Line straddling)", "Belt Width": "Customer conveyor (Max product width 170 mm)", "Detection Area": "—",
     "Launch Year": "2015 (Jan 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X3735", tag: "Side View (Split-Beam)", image: "img/X3735.png", specs: {
+  { brand: "Mettler-Toledo", name: "X3735", tag: "Side View (Split-Beam)", image: "img/mettler-toledo/x3735.png", specs: {
     "Orientation": "Side View (Split-Beam)", "Output Power": "420 W",
     "HV Voltage (Infinitely variable)": "Up to 84 kV", "HV Current (Infinitely variable)": "Up to 5.0 mA (420W)",
     "Cooling System": "AC Unit & Radiator Pump (420W)", "Sensor Technology": "Diode (Split-Beam Dual Detector)",
@@ -531,7 +531,7 @@ const modelsMettlerToledo = [
     "Conveyor Length": "4,500 - 5,200 mm (Full-length integrated conveyor)", "Belt Width": "Integrated conveyor (Max product width 180 mm)", "Detection Area": "—",
     "Launch Year": "2015 (Mid 2015)", "Warranty & Service Contract Conditions": mtWarranty
   }},
-  { brand: "Mettler-Toledo", name: "X3750", tag: "Side View (Angle Beam)", image: "img/X3750.png", specs: {
+  { brand: "Mettler-Toledo", name: "X3750", tag: "Side View (Angle Beam)", image: "img/mettler-toledo/x3750.png", specs: {
     "Orientation": "Side View (Angle Beam)", "Output Power": "420 W",
     "HV Voltage (Infinitely variable)": "Up to 84 kV or 100 kV", "HV Current (Infinitely variable)": "Up to 5.0 mA (420W)",
     "Cooling System": "AC Unit & Radiator Pump (420W)", "Sensor Technology": "Angle Beam Detector",
@@ -549,7 +549,7 @@ const modelsMettlerToledo = [
    Model data — Ishida
    ============================================================ */
 const modelsIshida = [
-  { brand: "Ishida", name: "IX-EN-2463", tag: "Top-Down", image: "img/IX-EN.png", specs: {
+  { brand: "Ishida", name: "IX-EN-2463", tag: "Top-Down", image: "img/ishida/ix-en.png", specs: {
     "Orientation": "Top-Down", "Output Power": "55 W", "HV Voltage (Infinitely variable)": "30-50 kV (Glass Type)",
     "HV Current (Infinitely variable)": "1 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm",
@@ -562,7 +562,7 @@ const modelsIshida = [
     "Conveyor Length": "800 mm", "Belt Width": "240 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 30,000 running hour"
   }},
-  { brand: "Ishida", name: "IX-EN-2493", tag: "Top-Down", image: "img/IX-EN.png", specs: {
+  { brand: "Ishida", name: "IX-EN-2493", tag: "Top-Down", image: "img/ishida/ix-en.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-75 kV (Glass Type)",
     "HV Current (Infinitely variable)": "1-3 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm",
@@ -575,7 +575,7 @@ const modelsIshida = [
     "Conveyor Length": "800 mm", "Belt Width": "240 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 15,000 running hour / 3 years (whichever come earlier)"
   }},
-  { brand: "Ishida", name: "IX-EN-2493-C", tag: "Top-Down (Compact)", image: "img/IX-EN-2493-C.png", specs: {
+  { brand: "Ishida", name: "IX-EN-2493-C", tag: "Top-Down (Compact)", image: "img/ishida/ix-en-2493-c.png", specs: {
     "Orientation": "Top-Down (Compact)", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-75 kV (Glass Type)",
     "HV Current (Infinitely variable)": "1-3 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm",
@@ -588,7 +588,7 @@ const modelsIshida = [
     "Conveyor Length": "1115 mm", "Belt Width": "160 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 15,000 running hour / 3 years (whichever come earlier)"
   }},
-  { brand: "Ishida", name: "IX-EN-24A1", tag: "Top-Down", image: "img/IX-EN-24A1.png", specs: {
+  { brand: "Ishida", name: "IX-EN-24A1", tag: "Top-Down", image: "img/ishida/ix-en-24a1.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-75 kV (Glass Type)",
     "HV Current (Infinitely variable)": "1-5 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "GA Auto Choice (300 programs)", "Resolution": "—",
@@ -601,7 +601,7 @@ const modelsIshida = [
     "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 15,000 running hour / 3 years (whichever come earlier)"
   }},
-  { brand: "Ishida", name: "IX-EN-4062", tag: "Top-Down", image: "img/IX-EN.png", specs: {
+  { brand: "Ishida", name: "IX-EN-4062", tag: "Top-Down", image: "img/ishida/ix-en.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 55 W", "HV Voltage (Infinitely variable)": "30-55 kV (Glass Type)",
     "HV Current (Infinitely variable)": "1 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.6 mm",
@@ -613,7 +613,7 @@ const modelsIshida = [
     "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "400 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-EN-4093", tag: "Top-Down", image: "img/IX-EN.png", specs: {
+  { brand: "Ishida", name: "IX-EN-4093", tag: "Top-Down", image: "img/ishida/ix-en.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-75 kV (Glass Type)",
     "HV Current (Infinitely variable)": "1-3 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm",
@@ -626,7 +626,7 @@ const modelsIshida = [
     "Conveyor Length": "800 mm", "Belt Width": "400 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 15,000 running hour / 3 years (whichever come earlier)"
   }},
-  { brand: "Ishida", name: "IX-EN-5592", tag: "Top-Down (Large)", image: "img/IX-EN-5592.png", specs: {
+  { brand: "Ishida", name: "IX-EN-5592", tag: "Top-Down (Large)", image: "img/ishida/ix-en-5592.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-90 kV",
     "HV Current (Infinitely variable)": "1-5mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.6 mm",
@@ -639,7 +639,7 @@ const modelsIshida = [
     "Conveyor Length": "1200 mm", "Belt Width": "550 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 15,000 running hour / 3 years (whichever come earlier)"
   }},
-  { brand: "Ishida", name: "IX-GN-2443", tag: "Top-Down", image: "img/IX-GN-2443.png", specs: {
+  { brand: "Ishida", name: "IX-GN-2443", tag: "Top-Down", image: "img/ishida/ix-gn-2443.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
     "HV Current (Infinitely variable)": "1-5 mA", "Cooling System": "Integrated Air Conditioning",
     "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "0.4 mm",
@@ -651,7 +651,7 @@ const modelsIshida = [
     "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "240 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-GN-2444", tag: "Top-Down", image: "img/IX-GN-2443.png", specs: {
+  { brand: "Ishida", name: "IX-GN-2444", tag: "Top-Down", image: "img/ishida/ix-gn-2443.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
     "HV Current (Infinitely variable)": "1-8 mA", "Cooling System": "Integrated Air Conditioning",
     "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "0.3 mm",
@@ -663,7 +663,7 @@ const modelsIshida = [
     "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "240 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-GN-4043", tag: "Top-Down", image: "img/IX-GN.png", specs: {
+  { brand: "Ishida", name: "IX-GN-4043", tag: "Top-Down", image: "img/ishida/ix-gn.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25-75 kV",
     "HV Current (Infinitely variable)": "1-8 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.4 mm",
@@ -675,7 +675,7 @@ const modelsIshida = [
     "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "400 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-GN-4044", tag: "Top-Down", image: "img/IX-GN.png", specs: {
+  { brand: "Ishida", name: "IX-GN-4044", tag: "Top-Down", image: "img/ishida/ix-gn.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25-75 kV",
     "HV Current (Infinitely variable)": "1-8 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.3 mm",
@@ -687,7 +687,7 @@ const modelsIshida = [
     "Conveyor Height": "700mm～1000mm±50mm (Standard); >1000mm (Opt.)", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "400 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-GN-4044A", tag: "Top-Down", image: "img/IX-GN.png", specs: {
+  { brand: "Ishida", name: "IX-GN-4044A", tag: "Top-Down", image: "img/ishida/ix-gn.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
     "HV Current (Infinitely variable)": "1-8 mA", "Cooling System": "Integrated Air Conditioning",
     "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "0.3 mm",
@@ -699,7 +699,7 @@ const modelsIshida = [
     "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "220 mm",
     "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-GN-5523", tag: "Top-Down (Large)", image: "img/IX-GN.png", specs: {
+  { brand: "Ishida", name: "IX-GN-5523", tag: "Top-Down (Large)", image: "img/ishida/ix-gn.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "40-100 kV",
     "HV Current (Infinitely variable)": "1-5 mA", "Cooling System": "Heat Sink (Standard); Air Conditioner (Opt.)",
     "Sensor Technology": "Diode", "Resolution": "0.3 mm",
@@ -712,7 +712,7 @@ const modelsIshida = [
     "Conveyor Length": "1200 mm", "Belt Width": "550 mm", "Detection Area": "—",
     "Warranty & Service Contract Conditions": "Machine : Warranty 15 month after delivery date; Generator : 15,000 running hour / 3 years (whichever come earlier)"
   }},
-  { brand: "Ishida", name: "IX-G2-2427", tag: "Top-Down (Dual Energy)", image: "img/IX-G2.png", specs: {
+  { brand: "Ishida", name: "IX-G2-2427", tag: "Top-Down (Dual Energy)", image: "img/ishida/ix-g2.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "Max. 100 kV",
     "HV Current (Infinitely variable)": "Max. 5 mA", "Cooling System": "Hermetic Air Cooling",
     "Sensor Technology": "Dual Energy Sensor (G2 Technology)", "Resolution": "0.4 mm",
@@ -724,7 +724,7 @@ const modelsIshida = [
     "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-G2-4027", tag: "Top-Down (Dual Energy)", image: "img/IX-G2.png", specs: {
+  { brand: "Ishida", name: "IX-G2-4027", tag: "Top-Down (Dual Energy)", image: "img/ishida/ix-g2.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "Max. 100 kV",
     "HV Current (Infinitely variable)": "Max. 5 mA", "Cooling System": "Hermetic Air Cooling",
     "Sensor Technology": "Dual Energy Sensor (G2 Technology)", "Resolution": "0.4 mm",
@@ -736,7 +736,7 @@ const modelsIshida = [
     "Conveyor Height": "900 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "800 mm", "Belt Width": "430 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-PD-36A2", tag: "Top-Down (Photon Counting)", image: "img/IX-PD.png", specs: {
+  { brand: "Ishida", name: "IX-PD-36A2", tag: "Top-Down (Photon Counting)", image: "img/ishida/ix-pd.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25-75 kV",
     "HV Current (Infinitely variable)": "1-8 mA", "Cooling System": "1.0kW Air Conditioner (Built-in)",
     "Sensor Technology": "Photon Counting Dual Energy (Direct Conversion)", "Resolution": "—",
@@ -748,7 +748,7 @@ const modelsIshida = [
     "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "—", "Belt Width": "—", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-PD-45A2", tag: "Top-Down (Photon Counting)", image: "img/IX-PD.png", specs: {
+  { brand: "Ishida", name: "IX-PD-45A2", tag: "Top-Down (Photon Counting)", image: "img/ishida/ix-pd.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25-75 kV",
     "HV Current (Infinitely variable)": "1-8 mA", "Cooling System": "1.0kW Air Conditioner (Built-in)",
     "Sensor Technology": "Photon Counting Dual Energy (Direct Conversion)", "Resolution": "—",
@@ -760,7 +760,7 @@ const modelsIshida = [
     "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "150 mm",
     "Conveyor Length": "—", "Belt Width": "—", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-GA-65100", tag: "Top-Down (Large High)", image: "img/IX-GA-65100.png", specs: {
+  { brand: "Ishida", name: "IX-GA-65100", tag: "Top-Down (Large High)", image: "img/ishida/ix-ga-65100.png", specs: {
     "Orientation": "Top-Down (Large High)", "Output Power": "Max. 350 W", "HV Voltage (Infinitely variable)": "40/45/50/55/60/65/70/75/80/85/90/95/100 kV",
     "HV Current (Infinitely variable)": "1-5.0 mA", "Cooling System": "Hermetic Air Cooling",
     "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "—",
@@ -772,7 +772,7 @@ const modelsIshida = [
     "Conveyor Height": "750 mm ± 50", "Overall Height": "—", "Max. Product Height": "270 mm (Option: 420 mm)",
     "Conveyor Length": "1200 mm", "Belt Width": "700 mm", "Detection Area": "—"
   }},
-  { brand: "Ishida", name: "IX-GA-B3043", tag: "Side View (Bottle)", image: "img/IX-GA-B3043.png", specs: {
+  { brand: "Ishida", name: "IX-GA-B3043", tag: "Side View (Bottle)", image: "img/ishida/ix-ga-b3043.png", specs: {
     "Orientation": "Side View (Bottle)", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "30-75 kV",
     "HV Current (Infinitely variable)": "1-8.0 mA", "Cooling System": "Hermetic Air Cooling",
     "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "—",
@@ -790,7 +790,7 @@ const modelsIshida = [
    ============================================================ */
 const modelsAnritsu = [
   /* ---------- XR75 Single Energy — Packaged (4 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 Packaged 240 (AWCLE)", tag: "Top-Down", image: "img/XR75-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 Packaged 240 (AWCLE)", tag: "Top-Down", image: "img/anritsu/xr75-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -803,7 +803,7 @@ const modelsAnritsu = [
     "Conveyor Height": "—", "Overall Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Packaged 240 (AVCLE)", tag: "Top-Down", image: "img/XR75-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 Packaged 240 (AVCLE)", tag: "Top-Down", image: "img/anritsu/xr75-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -816,7 +816,7 @@ const modelsAnritsu = [
     "Conveyor Height": "—", "Overall Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Packaged 390 (AWCLE)", tag: "Top-Down", image: "img/XR75-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 Packaged 390 (AWCLE)", tag: "Top-Down", image: "img/anritsu/xr75-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -829,7 +829,7 @@ const modelsAnritsu = [
     "Conveyor Height": "—", "Overall Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
     "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Packaged 390 (AVCLE)", tag: "Top-Down", image: "img/XR75-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 Packaged 390 (AVCLE)", tag: "Top-Down", image: "img/anritsu/xr75-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -844,7 +844,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- XR75 Single Energy — Lightweight (4 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 Lightweight 240 (CWCLE)", tag: "Top-Down", image: "img/XR75-Lightweight.png", specs: {
+  { brand: "Anritsu", name: "XR75 Lightweight 240 (CWCLE)", tag: "Top-Down", image: "img/anritsu/xr75-lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "10-100 W", "HV Voltage (Infinitely variable)": "25-60 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -858,7 +858,7 @@ const modelsAnritsu = [
     "Max. Product Height": "50 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Lightweight 240 (CVCLE)", tag: "Top-Down", image: "img/XR75-Lightweight.png", specs: {
+  { brand: "Anritsu", name: "XR75 Lightweight 240 (CVCLE)", tag: "Top-Down", image: "img/anritsu/xr75-lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "10-100 W", "HV Voltage (Infinitely variable)": "25-60 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -872,7 +872,7 @@ const modelsAnritsu = [
     "Max. Product Height": "50 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Lightweight 390 (CWCLE)", tag: "Top-Down", image: "img/XR75-Lightweight.png", specs: {
+  { brand: "Anritsu", name: "XR75 Lightweight 390 (CWCLE)", tag: "Top-Down", image: "img/anritsu/xr75-lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "10-100 W", "HV Voltage (Infinitely variable)": "25-60 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -886,7 +886,7 @@ const modelsAnritsu = [
     "Max. Product Height": "50 mm",
     "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Lightweight 390 (CVCLE)", tag: "Top-Down", image: "img/XR75-Lightweight.png", specs: {
+  { brand: "Anritsu", name: "XR75 Lightweight 390 (CVCLE)", tag: "Top-Down", image: "img/anritsu/xr75-lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "10-100 W", "HV Voltage (Infinitely variable)": "25-60 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -902,7 +902,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- XR75 Single Energy — Large (2 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 Large/Case (AWHSE)", tag: "Top-Down (Large, 0.4 mm sphere)", image: "img/XR75-Large.png", specs: {
+  { brand: "Anritsu", name: "XR75 Large/Case (AWHSE)", tag: "Top-Down (Large, 0.4 mm sphere)", image: "img/anritsu/xr75-large.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -915,7 +915,7 @@ const modelsAnritsu = [
     "Conveyor Height": "700-800 mm", "Overall Height": "—", "Max. Product Height": "250 mm (Option: 350 mm)",
     "Conveyor Length": "—", "Belt Width": "620 mm", "Detection Area": "590 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Large/Case (AWHSG)", tag: "Top-Down (Large, 0.5 mm sphere)", image: "img/XR75-Large.png", specs: {
+  { brand: "Anritsu", name: "XR75 Large/Case (AWHSG)", tag: "Top-Down (Large, 0.5 mm sphere)", image: "img/anritsu/xr75-large.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -930,7 +930,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- XR75 DualX (4 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 DualX Packaged 240 (AWHZE)", tag: "Top-Down (Dual Energy)", image: "img/XR75-DualX-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 DualX Packaged 240 (AWHZE)", tag: "Top-Down (Dual Energy)", image: "img/anritsu/xr75-dualx-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "25-60 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Dual Energy Sensor", "Resolution": "—",
@@ -943,7 +943,7 @@ const modelsAnritsu = [
     "Conveyor Height": "—", "Overall Height": "1477-1577 mm (Line Height)", "Max. Product Height": "120 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "555 mm"
   }},
-  { brand: "Anritsu", name: "XR75 DualX Packaged 390 (AWHZE)", tag: "Top-Down (Dual Energy)", image: "img/XR75-DualX-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 DualX Packaged 390 (AWHZE)", tag: "Top-Down (Dual Energy)", image: "img/anritsu/xr75-dualx-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "25-80 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Dual Energy Sensor", "Resolution": "—",
@@ -956,7 +956,7 @@ const modelsAnritsu = [
     "Conveyor Height": "—", "Overall Height": "1624-1724 mm (Line Height)", "Max. Product Height": "220 mm",
     "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "630 mm"
   }},
-  { brand: "Anritsu", name: "XR75 DualX Lightweight 240 (CWHZE)", tag: "Top-Down (Dual Energy)", image: "img/XR75-DualX-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 DualX Lightweight 240 (CWHZE)", tag: "Top-Down (Dual Energy)", image: "img/anritsu/xr75-dualx-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "25-60 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Dual Energy Sensor", "Resolution": "—",
@@ -969,7 +969,7 @@ const modelsAnritsu = [
     "Conveyor Height": "—", "Overall Height": "1347-1355 mm / 10°-15° incline", "Max. Product Height": "50 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "555 mm"
   }},
-  { brand: "Anritsu", name: "XR75 DualX Lightweight 390 (CWHZE)", tag: "Top-Down (Dual Energy)", image: "img/XR75-DualX-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 DualX Lightweight 390 (CWHZE)", tag: "Top-Down (Dual Energy)", image: "img/anritsu/xr75-dualx-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "25-60 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Dual Energy Sensor", "Resolution": "—",
@@ -984,7 +984,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- XR75 HR Dual Energy (2 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 DualX+ Fish (CMGCD)", tag: "Top-Down (HR Dual Energy)", image: "img/XR75-DualXPlus-Fish.png", specs: {
+  { brand: "Anritsu", name: "XR75 DualX+ Fish (CMGCD)", tag: "Top-Down (HR Dual Energy)", image: "img/anritsu/xr75-dualxplus-fish.png", specs: {
     "Orientation": "Top-Down", "Output Power": "300 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HR Dual Energy Sensor", "Resolution": "—",
@@ -997,7 +997,7 @@ const modelsAnritsu = [
     "Conveyor Height": "800-900 mm", "Overall Height": "—", "Max. Product Height": "70 mm",
     "Conveyor Length": "—", "Belt Width": "465 mm", "Detection Area": "370 mm"
   }},
-  { brand: "Anritsu", name: "XR75 DualX+ Packaged (ASGCD)", tag: "Top-Down (HR Dual Energy)", image: "img/XR75-DualXPlus-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR75 DualX+ Packaged (ASGCD)", tag: "Top-Down (HR Dual Energy)", image: "img/anritsu/xr75-dualxplus-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "300 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner (IP54)",
     "Sensor Technology": "HR Dual Energy Sensor (Detects 0.2 mm metal)", "Resolution": "—",
@@ -1012,7 +1012,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- XR75 Special (4 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 IP69K (AMCLE)", tag: "Top-Down (IP69K)", image: "img/XR75-IP69K.png", specs: {
+  { brand: "Anritsu", name: "XR75 IP69K (AMCLE)", tag: "Top-Down (IP69K)", image: "img/anritsu/xr75-ip69k.png", specs: {
     "Orientation": "Top-Down", "Output Power": "100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -1025,7 +1025,7 @@ const modelsAnritsu = [
     "Conveyor Height": "720-780 mm", "Overall Height": "—", "Max. Product Height": "200 mm",
     "Conveyor Length": "—", "Belt Width": "430 mm", "Detection Area": "370 mm"
   }},
-  { brand: "Anritsu", name: "XR75 Multi-Lane (AWCLE + KWS6031)", tag: "Top-Down (Multi-Lane)", image: "img/XR75-MultiLane.png", specs: {
+  { brand: "Anritsu", name: "XR75 Multi-Lane (AWCLE + KWS6031)", tag: "Top-Down (Multi-Lane)", image: "img/anritsu/xr75-multilane.png", specs: {
     "Orientation": "Top-Down", "Output Power": "12-100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging + Checkweigher (Multi-Lane)", "Resolution": "—",
@@ -1038,7 +1038,7 @@ const modelsAnritsu = [
     "Conveyor Height": "750 mm", "Overall Height": "—", "Max. Product Height": "220 mm",
     "Conveyor Length": "—", "Belt Width": "420 mm (60 mm lane pitch, Multi-Lane)", "Detection Area": "—"
   }},
-  { brand: "Anritsu", name: "XR75 Packing Check (DGEKE)", tag: "Top-Down (Seal Check)", image: "img/XR75-PackingCheck.png", specs: {
+  { brand: "Anritsu", name: "XR75 Packing Check (DGEKE)", tag: "Top-Down (Seal Check)", image: "img/anritsu/xr75-packingcheck.png", specs: {
     "Orientation": "Top-Down", "Output Power": "—", "HV Voltage (Infinitely variable)": "—",
     "HV Current (Infinitely variable)": "—", "Cooling System": "—",
     "Sensor Technology": "New X-ray Sensor (Seal Defect Detection)", "Resolution": "—",
@@ -1051,7 +1051,7 @@ const modelsAnritsu = [
     "Conveyor Height": "750-850 mm", "Overall Height": "—", "Max. Product Height": "50 mm",
     "Conveyor Length": "—", "Belt Width": "250 mm", "Detection Area": "205 mm"
   }},
-  { brand: "Anritsu", name: "XR75 SideView (BWELE)", tag: "Side View (Tall)", image: "img/XR75-SideView.png", specs: {
+  { brand: "Anritsu", name: "XR75 SideView (BWELE)", tag: "Side View (Tall)", image: "img/anritsu/xr75-sideview.png", specs: {
     "Orientation": "Side View (Tall Package)", "Output Power": "12-150 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-5.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "HD Imaging (Single Energy)", "Resolution": "—",
@@ -1066,7 +1066,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- KD74 Pipeline (2 รุ่น) ---------- */
-  { brand: "Anritsu", name: "KD74 Pipeline 3\"", tag: "Pipeline (3\")", image: "img/KD74-Pipeline.png", specs: {
+  { brand: "Anritsu", name: "KD74 Pipeline 3\"", tag: "Pipeline (3\")", image: "img/anritsu/kd74-pipeline.png", specs: {
     "Orientation": "Pipeline (3 inch)", "Output Power": "210 W", "HV Voltage (Infinitely variable)": "—",
     "HV Current (Infinitely variable)": "—", "Cooling System": "A/C",
     "Sensor Technology": "HD Imaging (Beryllium Tube)", "Resolution": "—",
@@ -1079,7 +1079,7 @@ const modelsAnritsu = [
     "Conveyor Height": "—", "Overall Height": "—", "Max. Product Height": "17 mm",
     "Conveyor Length": "—", "Belt Width": "3\" diameter", "Detection Area": "—"
   }},
-  { brand: "Anritsu", name: "KD74 Pipeline 4\"", tag: "Pipeline (4\")", image: "img/KD74-Pipeline.png", specs: {
+  { brand: "Anritsu", name: "KD74 Pipeline 4\"", tag: "Pipeline (4\")", image: "img/anritsu/kd74-pipeline.png", specs: {
     "Orientation": "Pipeline (4 inch)", "Output Power": "210 W", "HV Voltage (Infinitely variable)": "—",
     "HV Current (Infinitely variable)": "—", "Cooling System": "A/C",
     "Sensor Technology": "HD Imaging (Beryllium Tube)", "Resolution": "—",
@@ -1094,7 +1094,7 @@ const modelsAnritsu = [
   }},
 
   /* ---------- XR75 DualX Poultry GEN2 (1 รุ่น) ---------- */
-  { brand: "Anritsu", name: "XR75 DualX Poultry GEN2 (CMHZE)", tag: "Top-Down (Poultry GEN2)", image: "img/XR75-DualX-Poultry.png", specs: {
+  { brand: "Anritsu", name: "XR75 DualX Poultry GEN2 (CMHZE)", tag: "Top-Down (Poultry GEN2)", image: "img/anritsu/xr75-dualx-poultry.png", specs: {
     "Orientation": "Top-Down", "Output Power": "350 W", "HV Voltage (Infinitely variable)": "30-60 kV",
     "HV Current (Infinitely variable)": "0.4-10.0 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Super HD Dual Energy Sensor (GEN2)", "Resolution": "—",
@@ -1113,7 +1113,7 @@ const modelsAnritsu = [
    XR76 Series
    ============================================================ */
 const modelsXR76 = [
-  { brand: "Anritsu", name: "XR76 Standard 240 (AVCTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR76 Standard 240 (AVCTV)", tag: "Top-Down (Next-Gen)", image: "img/anritsu/xr75-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Next-Gen HD Imaging (XR76)", "Resolution": "—",
@@ -1125,7 +1125,7 @@ const modelsXR76 = [
     "Conveyor Height": "—", "Overall Height": "1440-1540 mm (Line Height)", "Max. Product Height": "120 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
-  { brand: "Anritsu", name: "XR76 Standard 390 (AVCTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR76 Standard 390 (AVCTV)", tag: "Top-Down (Next-Gen)", image: "img/anritsu/xr75-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 100 W", "HV Voltage (Infinitely variable)": "30-80 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Next-Gen HD Imaging (XR76)", "Resolution": "—",
@@ -1137,7 +1137,7 @@ const modelsXR76 = [
     "Conveyor Height": "—", "Overall Height": "1620-1720 mm (Line Height)", "Max. Product Height": "220 mm",
     "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
-  { brand: "Anritsu", name: "XR76 Incline 240 (CVCTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Lightweight.png", specs: {
+  { brand: "Anritsu", name: "XR76 Incline 240 (CVCTV)", tag: "Top-Down (Next-Gen)", image: "img/anritsu/xr75-lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 100 W", "HV Voltage (Infinitely variable)": "30-60 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Next-Gen HD Imaging (XR76)", "Resolution": "—",
@@ -1149,7 +1149,7 @@ const modelsXR76 = [
     "Conveyor Height": "—", "Overall Height": "1330-1360 mm / 10°-15° incline", "Max. Product Height": "50 mm",
     "Conveyor Length": "—", "Belt Width": "270 mm", "Detection Area": "730 mm"
   }},
-  { brand: "Anritsu", name: "XR76 Incline 390 (CVCTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Lightweight.png", specs: {
+  { brand: "Anritsu", name: "XR76 Incline 390 (CVCTV)", tag: "Top-Down (Next-Gen)", image: "img/anritsu/xr75-lightweight.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 100 W", "HV Voltage (Infinitely variable)": "30-60 kV",
     "HV Current (Infinitely variable)": "0.4-3.3 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Next-Gen HD Imaging (XR76)", "Resolution": "—",
@@ -1161,7 +1161,7 @@ const modelsXR76 = [
     "Conveyor Height": "—", "Overall Height": "1515-1530 mm / 10°-15° incline", "Max. Product Height": "50 mm",
     "Conveyor Length": "—", "Belt Width": "420 mm", "Detection Area": "880 mm"
   }},
-  { brand: "Anritsu", name: "XR76 Divided (DGBTV)", tag: "Top-Down (Next-Gen)", image: "img/XR75-Packaged.png", specs: {
+  { brand: "Anritsu", name: "XR76 Divided (DGBTV)", tag: "Top-Down (Next-Gen)", image: "img/anritsu/xr75-packaged.png", specs: {
     "Orientation": "Top-Down", "Output Power": "Max. 25 W", "HV Voltage (Infinitely variable)": "50 kV",
     "HV Current (Infinitely variable)": "0.4-0.5 mA", "Cooling System": "Air Conditioner Free (A.L.L. Technology)",
     "Sensor Technology": "Next-Gen HD Imaging (XR76)", "Resolution": "—",

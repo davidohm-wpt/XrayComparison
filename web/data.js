@@ -606,7 +606,7 @@ const modelsIshida = [
   { brand: "Ishida", name: "IX-EN-5592", tag: "Top-Down (Large)", image: "img/IX-EN-5592.png", specs: {
     "Orientation": "Top-Down (Large)", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "30-90 kV",
     "HV Current (Infinitely variable)": "1.0-3.0 mA", "Cooling System": "Hermetic Air Cooling",
-    "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "—",
+    "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "0.6 mm",
     "Scanning Speed": "5-30 m/min (25 kg) / 10-60 m/min (5 kg)", "Drive": "—", "Max. Transport Weight": "25 kg",
     "Display": "15\" Color Touch Display", "Temperature Range": "0 to +33°C",
     "Construction Frame": "Stainless Steel 304", "IP Rating": "IP66 (Conveyor) / IP54 (Enclosure, IP65 opt)",
@@ -640,7 +640,7 @@ const modelsIshida = [
     "Conveyor Length": "800 mm", "Belt Width": "270 mm", "Detection Area": "—"
   }},
   { brand: "Ishida", name: "IX-GN-4043", tag: "Top-Down", image: "img/IX-GN.png", specs: {
-    "Orientation": "Top-Down", "Output Power": "Max. 150 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
+    "Orientation": "Top-Down", "Output Power": "Max. 300 W", "HV Voltage (Infinitely variable)": "25/30/35/40/45/50/55/60/65/70/75 kV",
     "HV Current (Infinitely variable)": "1-5 mA", "Cooling System": "Integrated Air Conditioning",
     "Sensor Technology": "GA (Genetic Algorithm)", "Resolution": "0.4 mm",
     "Scanning Speed": "10-60 m/min", "Drive": "—", "Max. Transport Weight": "5 kg",

@@ -233,4 +233,10 @@ _temp_clone/
 #     git add -f ชื่อไฟล์
 # ============================================================
 Push.bat
-Run_Comparison.bat
+Make_NewPC_Pack.bat
+# Run_Comparison.bat IS on GitHub: serve.py copies it to the sales PCs automatically.
+
+# Excel working files (the app reads its data from web/data.js, not from Excel)
+*.xlsx
+*.xls
+*.xlsm

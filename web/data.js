@@ -21,6 +21,7 @@ const translations = {
     showAllRows: "Show all",
     hiddenRows: "Hidden rows",
     hiddenNote: "Hidden rows are not shown here or in the PDF.",
+    appClosed: "The program has been closed. Open X-Ray Comparison again from the Desktop to continue.",
     labels: {
       "Orientation": "Orientation",
       "Output Power": "Output Power",
@@ -93,6 +94,7 @@ const translations = {
     showAllRows: "แสดงทั้งหมด",
     hiddenRows: "แถวที่ซ่อน",
     hiddenNote: "แถวที่ซ่อนจะไม่แสดงทั้งในหน้านี้และใน PDF",
+    appClosed: "โปรแกรมถูกปิดแล้ว กรุณาเปิด X-Ray Comparison จากหน้า Desktop อีกครั้งเพื่อใช้งานต่อ",
     labels: {
       "Orientation": "การติดตั้ง",
       "Output Power": "กำลังไฟออก",
@@ -170,6 +172,7 @@ const translations = {
     showAllRows: "全部显示",
     hiddenRows: "已隐藏行",
     hiddenNote: "隐藏的行不会显示在此页面和 PDF 中",
+    appClosed: "程序已关闭。请从桌面重新打开 X-Ray Comparison 继续使用。",
     labels: {
       "Orientation": "安装方向",
       "Output Power": "输出功率",

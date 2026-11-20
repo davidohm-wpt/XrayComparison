@@ -3,13 +3,14 @@
    4 Brands + 4-way Compare + Export PDF
    ============================================================ */
 
-console.log("app.js v1.7.1 loaded — 4 brands + 4-way Compare + Export PDF");
+console.log("app.js loaded — 4 brands + 4-way Compare + Export PDF");
 
 /* ---------- Version ---------- */
-fetch('VERSION.txt?t=' + Date.now())
+fetch('version.txt?t=' + Date.now())
   .then(r => { if (!r.ok) throw new Error('no version'); return r.text(); })
   .then(v => {
     const cleanVersion = v.trim();
+    console.log('X-Ray Comparison v' + cleanVersion);
     const badge = document.getElementById('version_badge');
     const footer = document.getElementById('footer_version');
     if (badge) badge.textContent = 'v' + cleanVersion;
@@ -161,11 +162,17 @@ function normSpec(s) {
   return s.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
 }
 
+/* A spec value that only means "no data" (empty, dash, N/A) */
+function isEmptySpec(s) {
+  if (!s) return true;
+  return /^(—|–|-|n\/a)?$/.test(normSpec(s));
+}
+
 /* Build one comparison row: values + whether all present values are the same */
 function buildRowValues(items, labelKey) {
   const values = items.map(item => {
     const raw = item.m.specs[labelKey];
-    const missing = !raw;
+    const missing = isEmptySpec(raw);
     return { html: missing ? '—' : raw, missing, norm: missing ? '' : normSpec(raw) };
   });
   const present = values.filter(v => !v.missing);
@@ -681,6 +688,36 @@ function exportComparePDF(items, itemCount) {
     btn.innerHTML = originalText;
   }
 }
+
+/* ============================================================
+   Heartbeat - keeps the local server (serve.py) running while this
+   window is open; the server stops by itself once all windows close.
+   The "closed" bar only appears after a heartbeat has worked once, so
+   nothing is shown when the page is served by another web server.
+   ============================================================ */
+(function () {
+  const id = Math.random().toString(36).slice(2);
+  let armed = false;
+  function bar(show) {
+    let b = document.getElementById('app-closed-bar');
+    if (!show) { if (b) b.remove(); return; }
+    if (!armed || b) return;
+    b = document.createElement('div');
+    b.id = 'app-closed-bar';
+    b.textContent = t('appClosed');
+    b.style.cssText = 'position:fixed;left:0;right:0;bottom:0;padding:10px 14px;background:#b02a37;color:#fff;font:14px "Segoe UI",sans-serif;text-align:center;z-index:2147483647';
+    document.body.appendChild(b);
+  }
+  function hb() {
+    fetch('/heartbeat', { method: 'POST', body: id, keepalive: true, cache: 'no-store' })
+      .then(r => { if (r.ok) armed = true; bar(!r.ok); })
+      .catch(() => bar(true));
+  }
+  hb();
+  setInterval(hb, 20000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) hb(); });
+  addEventListener('pagehide', () => { try { navigator.sendBeacon('/bye', id); } catch (e) {} });
+})();
 
 /* ============================================================
    Start

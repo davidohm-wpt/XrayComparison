@@ -13,9 +13,10 @@ $bat    = Join-Path $dir 'Run_Comparison.bat'
 $log    = Join-Path $dir 'launcher.log'
 $status = Join-Path $env:TEMP 'xray_launch_status.txt'
 
-# Web files live in .\repo\web on sales PCs and in .\web on the developer PC
+# Web files live in .\repo\web on sales PCs and in .\web on the developer PC; the installer
+# also puts a copy of the logo and version next to this file for the very first start.
 function Find-WebFile([string]$name) {
-    foreach ($p in @((Join-Path $dir "repo\web\$name"), (Join-Path $dir "web\$name"))) {
+    foreach ($p in @((Join-Path $dir "repo\web\$name"), (Join-Path $dir "web\$name"), (Join-Path $dir $name))) {
         if (Test-Path $p) { return $p }
     }
     return $null

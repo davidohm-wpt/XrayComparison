@@ -376,6 +376,77 @@ def open_app_window(url):
     webbrowser.open(url)
 
 
+# ------------------------------------------------------------
+# Hand-over: X-Ray Comparison now lives in WIPOTEC AIO Software (Tools section).
+# When that program is installed on this PC, open it (at its menu, where X-Ray
+# Comparison is under Tools) instead, remove this program's Desktop icon and stop. Otherwise carry on as before
+# (the page shows a notice asking for the WIPOTEC AIO Software installer).
+# Set XRAY_NO_HANDOVER=1 to keep using this program (e.g. for testing).
+# ------------------------------------------------------------
+AIO_SHORTCUTS = ("WIPOTEC AIO Software.lnk", "WIPOTEC Certificates.lnk")
+
+
+def _ps(script, env_extra=None, timeout=30):
+    env = dict(os.environ, **(env_extra or {}))
+    r = subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", script],
+                       env=env, creationflags=_hidden_flags(), timeout=timeout,
+                       stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    return r.stdout.decode("utf-8", "replace")
+
+
+def find_aio():
+    """Folder of WIPOTEC AIO Software on this PC (from its Desktop icon or the usual
+    install folder), or None."""
+    script = (
+        "[Console]::OutputEncoding = [Text.Encoding]::UTF8; "
+        "$desk = [Environment]::GetFolderPath('Desktop'); $sh = New-Object -ComObject WScript.Shell; "
+        "foreach ($n in $env:XRAY_AIO_LNK.Split('|')) { $p = Join-Path $desk $n; "
+        "  if (Test-Path -LiteralPath $p) { try { $sh.CreateShortcut($p).WorkingDirectory } catch { } } }; "
+        "Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'XRPV Generator'; "
+        "Join-Path $env:USERPROFILE 'XRPV Generator'")
+    try:
+        out = _ps(script, {"XRAY_AIO_LNK": "|".join(AIO_SHORTCUTS)})
+    except Exception:
+        return None
+    for line in out.splitlines():
+        d = line.strip().rstrip("\\")
+        if d and all(os.path.isfile(os.path.join(d, f)) for f in ("Launch.vbs", "Run_PV.bat", "main.py")):
+            return d
+    return None
+
+
+def _remove_own_shortcut(prog_dir):
+    script = ("$p = Join-Path ([Environment]::GetFolderPath('Desktop')) $env:XRAY_LNK_NAME; "
+              "if (Test-Path -LiteralPath $p) { $s = (New-Object -ComObject WScript.Shell).CreateShortcut($p); "
+              "  if ($s.WorkingDirectory.TrimEnd('\\') -eq $env:XRAY_LNK_DIR.TrimEnd('\\')) { Remove-Item -LiteralPath $p -Force } }")
+    try:
+        _ps(script, {"XRAY_LNK_NAME": SHORTCUT_NAME, "XRAY_LNK_DIR": prog_dir})
+    except Exception as e:
+        print("Could not remove the Desktop icon: %s" % e)
+
+
+def hand_over_to_aio():
+    """True when WIPOTEC AIO Software was started instead of this program."""
+    if os.name != "nt" or os.environ.get("XRAY_NO_HANDOVER") == "1":
+        return False
+    aio = find_aio()
+    if not aio:
+        print("WIPOTEC AIO Software is not installed on this PC - starting X-Ray Comparison as before.")
+        return False
+    print("Opening WIPOTEC AIO Software instead (X-Ray Comparison is under Tools): " + aio)
+    try:
+        subprocess.Popen([os.path.join(os.environ.get("WINDIR", r"C:\Windows"), "System32", "wscript.exe"),
+                          os.path.join(aio, "Launch.vbs")],
+                         cwd=aio, close_fds=True, creationflags=getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0),
+                         stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except OSError as e:
+        print("Could not start WIPOTEC AIO Software (%s) - starting X-Ray Comparison as before." % e)
+        return False
+    prog_dir, _ = _program_dir()
+    _remove_own_shortcut(prog_dir)
+    return True
+
+
 def main():
     try:
         sys.stdout.reconfigure(line_buffering=True)   # messages reach launcher.log right away
@@ -384,6 +455,9 @@ def main():
     if not os.path.isdir(WEB):
         set_status("error:The web folder was not found - the download may have failed.")
         sys.exit("[Error] web folder not found: " + WEB)
+    if hand_over_to_aio():
+        set_status("ready")   # closes this program's splash; WIPOTEC AIO Software shows its own
+        return
     set_status("step:server")
     stop_old_copies()
     shutil.rmtree(os.path.join(WEB, "_tmp"), ignore_errors=True)
